@@ -13,52 +13,65 @@
     width: 100%;    
     background-color: #fff;
     position: sticky;
-    border-bottom: solid gray 1px;
     padding: 20px 3%;
-    }
-
-    li a {
-        font-family: Helvetica,Arial,sans-serif;
-        font-size: 15px;
-        font-weight: 500px;
-        color: #012e4b;
-        text-decoration: none;      
+    border-bottom: solid gray 1px;
     }
 
     .img-logo{
         margin-right: auto;
     }
 
+    li a {
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 15px;
+        font-weight: 500px;
+        text-decoration: none;
+        color: #012e4b;             
+    }
+
     .nav-links{
         list-style:none;   
     }
 
-    .nav-links li{
+    .nav-links li {
         display: inline-block;
         padding: 0px 10px;
+        position: relative;
     }
 
+    .nav-links li::before{
+        content: "";
+        position: absolute;
+        left: 3;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background-color: #f26e22;
+        transition: width 0.55s ease-out;
+        margin-bottom: -40px;
+    }
+
+    .nav-links li:hover::before{
+        width: 85%;
+    }
 
     .number-phone-box{
         display: flex;
         align-items: center;
         background: #fff;
         box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-        border-radius: 5px;
-        margin-left: 10px;
         color: #012e4b;
+        border-radius: 5px;
+        margin-left: 30px;
         font-size: 14px;
         padding: 15px;
         gap: 10px;
     }
       
-    
-
-    .img-phone{
-        
+    .img-phone{        
         width: 25px;
         height: 25px;
-      }
+    }
       
 
 
