@@ -137,7 +137,7 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 17px;
         align-items: start;
         color: #012e4b; 
         padding: 40px 20px; 
@@ -167,7 +167,7 @@
 
 
       hr{
-          width: 96%;
+          width: 100%;
           border: 0;          
           background-color:#ccd4d8;
           height: 1px;
@@ -178,19 +178,8 @@
     .sign-and-compare-boxes{
           display: flex;
           width: 100%;
-          gap:20px;
-          justify-content: space-between;
-          border-top: 1px solid gray;
-          border-right: 1px solid gray;
-          border-left: 1px solid gray;
-          border-bottom: 1px solid gray;       
+          gap:20px;       
     }
-
-
-    .sign-and-compare-boxes>*{
-        flex: 1 1 100%;
-    }
-
 
     .sign-box{
         display: flex;
@@ -201,10 +190,7 @@
         color: #626c71;
         padding: 6px 0;
         font-size: 11px;
-        border-top: 1px solid gray;
-        border-right: 1px solid gray;
-        border-left: 1px solid gray;
-        border-bottom: 1px solid gray;
+        flex: 2 1 0;
     }
 
 
@@ -215,18 +201,29 @@
 
     .compare-now-box{
         display: flex;
+        justify-content: center;
+        align-items: center;
         background: #f26e22;
         font-size: 14px;
         color: white;
         border-radius: 5px;
-        border-top: 1px solid gray;
-        border-right: 1px solid gray;
-        border-left: 1px solid gray;
-        border-bottom: 1px solid gray;
+        flex: 1 1 50px;
     }
 
-    
+    .bg-img-hero-section h1{
+        font-size: 29px;
+    }
+
+
+    .bg-img-hero-section h3{
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+
     .bg-img-hero-section h5{
+        font-size: 14px;
+        font-weight: 500;
         color: #626c71;
     }
 
