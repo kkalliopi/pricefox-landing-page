@@ -1,10 +1,11 @@
 @media (min-width:992px){
-    body{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        margin: 0;   
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: Helvetica,Arial,sans-serif;
     }
+
 
     header{ 
     display: flex;
@@ -12,54 +13,36 @@
     align-items: center;
     width: 100%;    
     background-color: #fff;
-    position: sticky;
     padding: 20px 2%;
     border-bottom: solid gray 1px;
-    font-family: Helvetica,Arial,sans-serif;
     color: #012e4b;
     font-size: 15px;
     font-weight: 500px;
     }
 
+
     .img-logo{
         margin-right: auto;
     }
 
+
     .nav-links li {
         list-style:none; 
         display: inline-block;
-        position: relative;
         padding: 0px 10px;
     }
+
 
     li a {
         text-decoration: none; 
         color: #012e4b;      
     }
 
+
     li a:hover{
         color: #f26e22;
     }
 
-    .main-links{
-        position: relative;
-    }
-
-    .main-links::before{
-        content: "";
-        position: absolute;
-        left: 3;
-        bottom: 0;
-        width: 0;
-        height: 6px;
-        background-color: #f26e22;
-        transition: width 0.55s ease-out;
-        margin-bottom: -40px;
-    }
-
-    .main-links:hover::before{
-        width: 85%;
-    }
 
     .number-phone-box{
         display: flex;
@@ -72,36 +55,200 @@
         gap: 10px;
     }
       
+
     .img-phone{        
         width: 25px;
         height: 25px;
     }
-      
+
+
+    .main-links{
+        position: relative;
+    }
+
+
+    .main-links::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background-color: #f26e22;
+        transition: width 0.55s ease-out;
+        margin-bottom: -40px;
+    }
+
+
+    .main-links:hover::before{
+        width: 85%;
+    }
+
+
+    .nav-links li:hover .dropdown-menu{
+        display: flex;
+    }
+  
+    
     .dropdown-menu{       
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         background: #fff;
-        position:absolute;
+        position: absolute;
         left: -130px;
         padding: 25px 0;
         margin-top: 40px;
-        height: 110px;
+        height: 170px;
         width: 510px;
         display: none;
     }
   
+
     .dropdown-menu>*{
-        flex: 1 1 30px;
+        flex: 1 1 40px;
     }
+
 
     .contact{
         color: #f26e22;
     }
 
-    .nav-links li:hover .dropdown-menu{
+
+    main{
         display: flex;
+        flex-direction: column;  
     }
+
+
+    .bg-img-hero-section{
+        display: flex;
+        background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/mr-pricefox-black.jpg");
+        background-position: center;
+        background-size: cover;
+        width: inherit;
+        height: 550px;  
+        align-items: center;             
+    }
+
+
+    .box-to-compare-insurance-companies{
+        width: 470px;   
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+        color: #012e4b; 
+        padding: 40px 20px; 
+        margin-left: 8%;
+    }
+
+
+    .vehicle-selection{
+        display: flex;
+        width: 100%;
+        color: #929ca1;
+        font-size: 14px;
+        font-weight: bold;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+
+      .vehicle-car{
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        border-left: 1px solid gray;
+        border-bottom: 1px solid gray;
+        padding: 10px;
+        color: #012e4b;
+      }
+
+
+      hr{
+          width: 96%;
+          border: 0;          
+          background-color:#ccd4d8;
+          height: 1px;
+          margin: 15px 0;
+    }
+
+
+    .sign-and-compare-boxes{
+          display: flex;
+          width: 100%;
+          gap:20px;
+          justify-content: space-between;
+          border-top: 1px solid gray;
+          border-right: 1px solid gray;
+          border-left: 1px solid gray;
+          border-bottom: 1px solid gray;       
+    }
+
+
+    .sign-and-compare-boxes>*{
+        flex: 1 1 100%;
+    }
+
+
+    .sign-box{
+        display: flex;
+        align-items: center;
+        background: #fff;
+        box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+        border-radius: 5px;
+        color: #626c71;
+        padding: 6px 0;
+        font-size: 11px;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        border-left: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+
+
+    .img-eur-flag{
+        margin-right: 6px;
+    }
+
+
+    .compare-now-box{
+        display: flex;
+        background: #f26e22;
+        font-size: 14px;
+        color: white;
+        border-radius: 5px;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        border-left: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+
+    
+    .bg-img-hero-section h5{
+        color: #626c71;
+    }
+
+
+    .carousel-section{
+        width: 100%;
+        height: 300px;
+        background-color: #fff;
+    }
+
+        
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
