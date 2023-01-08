@@ -54,6 +54,7 @@
         padding: 15px;
         gap: 10px;
     }
+
       
 
     .img-phone{        
@@ -254,8 +255,6 @@
         display: flex;
         padding: 25px;
         justify-content: space-around;
-        align-items: center;
-        height: inherit;
     }
 
     .card{
@@ -345,14 +344,27 @@
          
         
         .sign-and-compare-boxes{
-            display: flex;
             flex-direction: column;      
         }
 
 
         .cards-container{
-            display: none;
+            margin: 0;
         }
+
+        .cards-container h2{
+            padding: 10px 0;
+            font-size: 20px;
+    
+        }
+
+        .carousel{
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 5px;
+
+        }
+
 
         
 
