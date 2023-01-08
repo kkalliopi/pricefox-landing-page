@@ -1,4 +1,4 @@
-@media (min-width:992px){
+
     *{
         box-sizing: border-box;
         padding: 0;
@@ -7,9 +7,8 @@
     }
 
 
-    header{ 
+    .desktop-header{ 
         display: flex;
-        flex-direction: row;
         justify-content: flex-end;
         align-items: center;
         width: 100%;    
@@ -272,7 +271,6 @@
         box-shadow: 0 0 29px rgb(0 0 0 / 13%);
         color: #626c71;
         font-size: 13px;
-
     }
 
     .img-companies{
@@ -296,14 +294,73 @@
         display: none;
     }
 
-  
-    }
 
-    @edia (max-width: 900px){
+    @media (max-width: 992px){
+
+        *{
+            margin: 1%;
+        }
+
+
         .desktop-header{
             display: none;
         }
 
+
+        .mobile-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;    
+            background-color: #fff;
+            padding-bottom: 40px;
+            color: #012e4b;
+            font-size: 15px;
+            font-weight: 500px;
+        }
+
+
+        img-phone-mobile{
+            width: 25px;
+            height: 25px;
+        }
+
+
+
+        
+        .bg-img-hero-section{
+            align-items: start; 
+            background-image: none;
+            background-size: none;
+        }
+
+
+        .box-to-compare-insurance-companies{
+            width: 100%;   
+            box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+            margin-left: 0%;
+        }
+
+
+        .box-to-compare-insurance-companies h1{
+            font-size: 25px;
+        }
+
+
+        .box-to-compare-insurance-companies h3{
+            font-size: 14px;
+        }
+
+        .sign-and-compare-boxes{
+            display: flex;
+            flex-direction: column;      
+      }
+        .cards-container{
+            display: none;
+        }
+
+
+    
 
     }
 
