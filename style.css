@@ -120,7 +120,7 @@
     }
 
 
-    .bg-img-hero-section{
+    .section-with-bg-img-hero{
         display: flex;
         background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/mr-pricefox-black.jpg");
         background-position: center;
@@ -209,18 +209,18 @@
         flex: 1 1 50px;
     }
 
-    .bg-img-hero-section h1{
+    .section-with-bg-img-hero h1{
         font-size: 29px;
     }
 
 
-    .bg-img-hero-section h3{
+    .section-with-bg-img-hero h3{
         font-weight: 500;
         font-size: 15px;
     }
 
 
-    .bg-img-hero-section h5{
+    .section-with-bg-img-hero h5{
         font-size: 14px;
         font-weight: 500;
         color: #626c71;
@@ -320,47 +320,41 @@
         }
 
 
-        img-phone-mobile{
-            width: 25px;
-            height: 25px;
-        }
-
-
-
-        
-        .bg-img-hero-section{
+        .section-with-bg-img-hero{
             align-items: start; 
             background-image: none;
             background-size: none;
         }
-
-
+          
+          
         .box-to-compare-insurance-companies{
             width: 100%;   
             box-shadow: 0 0 29px rgb(0 0 0 / 13%);
             margin-left: 0%;
         }
-
-
+          
+          
         .box-to-compare-insurance-companies h1{
             font-size: 25px;
         }
-
-
+          
+          
         .box-to-compare-insurance-companies h3{
             font-size: 14px;
         }
-
+         
+        
         .sign-and-compare-boxes{
             display: flex;
             flex-direction: column;      
-      }
+        }
+
+
         .cards-container{
             display: none;
         }
 
-
-    
+        
 
     }
 
