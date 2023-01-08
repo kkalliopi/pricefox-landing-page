@@ -234,7 +234,7 @@
         background-color: #fff;
     }
 
-    .cards-container{
+    .best-offers-cards-container{
         display: flex;
         flex-direction: column;
         color: #012e4b;
@@ -245,7 +245,7 @@
         box-shadow: 0 0 29px rgb(0 0 0 / 13%);
     }
 
-    .cards-container h2{
+    .best-offers-cards-container h2{
         padding: 10px 0;
         font-size: 23px;
 
@@ -348,11 +348,11 @@
         }
 
 
-        .cards-container{
+        .best-offers-cards-container{
             margin: 0;
         }
 
-        .cards-container h2{
+        .best-offers-cards-container h2{
             padding: 10px 0;
             font-size: 20px;
     
