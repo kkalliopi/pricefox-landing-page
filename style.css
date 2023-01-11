@@ -1,8 +1,9 @@
 
-    *{
-        box-sizing: border-box;
-        padding: 0;
+    body{
+        width: 100%;
+        height: 100%;
         margin: 0;
+        padding: 0;
         font-family: Helvetica,Arial,sans-serif;
     }
 
@@ -18,6 +19,8 @@
         color: #012e4b;
         font-size: 15px;
         font-weight: 500px;
+        width: inherit;
+        position: sticky;
     }
 
 
@@ -99,7 +102,7 @@
         left: -130px;
         padding: 25px 0;
         margin-top: 40px;
-        height: 170px;
+        height: 120px;
         width: 510px;
         display: none;
     }
@@ -128,20 +131,20 @@
         background-size: cover;
         width: inherit;
         height: 620px;  
-        align-items: center;             
+        align-items: center; 
     }
 
 
     .box-to-compare-insurance-companies{
-        width: 470px;   
+        width: 450px;   
         background: #fff;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        gap: 17px;
+        gap: 10px;
         align-items: start;
         color: #012e4b; 
-        padding: 40px 20px; 
+        padding: 30px 20px; 
         margin-left: 8%;
     }
 
@@ -172,6 +175,7 @@
           border: 0;          
           background-color:#ccd4d8;
           height: 1px;
+          margin: 0;
     }
 
 
@@ -228,13 +232,13 @@
     }
 
 
-    .container{
+    main{
         width: 100%;
-        height: 600px;
+        height: 1600px;
         background-color: #fff;
     }
 
-    .best-offers-cards-container{
+    .carousel-container{
         display: flex;
         flex-direction: column;
         color: #012e4b;
@@ -245,19 +249,18 @@
         box-shadow: 0 0 29px rgb(0 0 0 / 13%);
     }
 
-    .best-offers-cards-container h2{
-        padding: 10px 0;
+    .carousel-container h2{
+        margin: 10px 0;
         font-size: 23px;
-
     }
 
-    .carousel{
+    .carousel-best-offers-cards{
         display: flex;
         padding: 25px;
         justify-content: space-around;
     }
 
-    .card{
+    .carousel-card{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -272,12 +275,12 @@
         font-size: 13px;
     }
 
-    .img-companies{
+    .carousel-img-companies{
         width: 120px;
         height: 73px;
       }
 
-    .discount{
+    .carousel-discount{
         background: #fff;
         box-shadow: 0 0 29px rgb(0 0 0 / 13%);
         border-radius: 5px;
@@ -348,19 +351,19 @@
         }
 
 
-        .best-offers-cards-container{
+        .carousel-container{
             margin: 0;
         }
 
-        .best-offers-cards-container h2{
-            padding: 10px 0;
+        .carousel-container h2{
+            adding: 10px 0;
             font-size: 20px;
     
         }
 
-        .carousel{
+        .carousel-best-offers-cards{
             flex-wrap: wrap;
-            padding: 10px;
+            padding: 5px;
             gap: 5px;
 
         }
