@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     </head>
     <body>
         <header>
@@ -39,6 +40,7 @@
         </header>
         <main>
             <div class="section-with-bg-img-hero">
+                
                 <div class="box-to-compare-insurance-companies">
                     <h1>Οι προσφορές της χρονιάς στην ασφάλεια αυτοκινήτου σου.</h1>
                     <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>
@@ -60,38 +62,72 @@
                     </div>
                     <h5>Δε θυμάσαι την πινακίδα σου; Βάλε ΧΧΧ1234 για να δεις ενδεικτικές προσφορές.</h5>
                 </div>
-            </div>   
-            <div class="carousel-container">
+            </div>  
+            <div class="best-offers-cards-container">
                 <h2>Μην χάσεις στο Pricefox τις καλύτερες προσφορές της αγοράς!</h2>
                 <hr>
-                <div class="carousel-best-offers-cards">
-                    <div class="carousel-card">
-                        <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/myZen.webp"/>
-                        <div class="carousel-discount">$35</div>
-                        <p>Δώρο καυσίμων έως 35€ μέχρι 31/12</p>
+                <div class="carousel-container">
+                    <div class="swiper mySwiper container">
+                        <div class="swiper-wrapper content">
+
+                            <div class="swiper-slide carousel-card">
+                                <div class="carousel-card-content">
+                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/myZen.webp"/>
+                                    <div class="carousel-discount">$35</div>
+                                    <p>Δώρο καυσίμων έως 35€ μέχρι 31/12</p> 
+                                </div>                       
+                            </div>
+                            <div class="swiper-slide carousel-card"> 
+                                <div class="carousel-card-content">                     
+                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/anytime.webp"/>
+                                    <div class="carousel-discount">-40%</div>
+                                    <p>σε όλα τα ετήσια συμβόλαια</p>  
+                                </div>                        
+                            </div>
+                            <div class="swiper-slide carousel-card"> 
+                                <div class="carousel-card-content">                    
+                                   <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/anytime.webp"/>
+                                   <div class="carousel-discount">-5%</div>
+                                   <p>για πελάτες COSMOTE</p>  
+                                </div>                      
+                            </div>
+                            <div class="swiper-slide carousel-card">
+                                <div class="carousel-card-content">                     
+                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/accredited.webp"/>
+                                    <div class="carousel-discount">-30%</div>
+                                    <p>σε όλα τα ετήσια συμβόλαια</p>  
+                                </div>                   
+                            </div>
+                            <div class="swiper-slide carousel-card"> 
+                                <div class="carousel-card-content">                   
+                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/apeiron.webp"/>
+                                    <div class="carousel-discount">-30%</div>
+                                    <p>για όλες τις επαρχιακές περιοχές μέχρι 31/12</p>  
+                                </div>                     
+                            </div> 
+                        </div>
                     </div>
-                    <div class="carousel-card">
-                        <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/anytime.webp"/>
-                        <div class="carousel-discount">-40%</div>
-                        <p>σε όλα τα ετήσια συμβόλαια</p>
-                    </div>
-                    <div class="carousel-card">
-                        <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/anytime.webp"/>
-                        <div class="carousel-discount">-5%</div>
-                        <p>για πελάτες COSMOTE</p>
-                    </div>
-                    <div class="carousel-card">
-                        <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/accredited.webp"/>
-                        <div class="carousel-discount">-30%</div>
-                        <p>σε όλα τα ετήσια συμβόλαια</p>
-                    </div>
-                    <div class="carousel-card">
-                        <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/apeiron.webp"/>
-                        <div class="carousel-discount">-30%</div>
-                        <p>για όλες τις επαρχιακές περιοχές μέχρι 31/12</p>
-                    </div>
-                </div>
-            </div>             
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>    
+            </div>            
         </main>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 5,
+            spaceBetween: 45,
+            slidesPerGroup: 5,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+
     </body>
 </html>    

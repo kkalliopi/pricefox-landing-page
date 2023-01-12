@@ -1,377 +1,406 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica,Arial,sans-serif;
+}
 
-    body{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: Helvetica,Arial,sans-serif;
+
+.desktop-header{ 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;    
+    background-color: #fff;
+    padding: 20px 2%;
+    border-bottom: solid gray 1px;
+    color: #012e4b;
+    font-size: 15px;
+    font-weight: 500px;
+    width: inherit;
+    position: sticky;
+}
+
+
+.img-logo{
+    margin-right: auto;
+}
+
+
+.nav-links li {
+    list-style:none; 
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+
+li a {
+    text-decoration: none; 
+    color: #012e4b;      
+}
+
+
+li a:hover{
+    color: #f26e22;
+}
+
+
+.number-phone-box{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 15px;
+    gap: 10px;
+}
+
+  
+
+.img-phone{        
+    width: 25px;
+    height: 25px;
+}
+
+
+.main-links{
+    position: relative;
+}
+
+
+.main-links::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background-color: #f26e22;
+    transition: width 0.55s ease-out;
+    margin-bottom: -40px;
+}
+
+
+.main-links:hover::before{
+    width: 85%;
+}
+
+
+.nav-links li:hover .dropdown-menu{
+    display: flex;
+}
+
+
+.dropdown-menu{       
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #fff;
+    position: absolute;
+    left: -130px;
+    padding: 25px 0;
+    margin-top: 40px;
+    height: 120px;
+    width: 510px;
+    display: none;
+}
+
+
+.dropdown-menu>*{
+    flex: 1 1 40px;
+}
+
+
+.contact{
+    color: #f26e22;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;  
+}
+
+
+.section-with-bg-img-hero{
+    display: flex;
+    background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/mr-pricefox-black.jpg");
+    background-position: center;
+    background-size: cover;
+    width: inherit;
+    height: 620px;  
+    align-items: center; 
+}
+
+
+.box-to-compare-insurance-companies{
+    width: 450px;   
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    color: #012e4b; 
+    padding: 30px 20px; 
+    margin-left: 8%;
+}
+
+
+.vehicle-selection{
+    display: flex;
+    width: 100%;
+    color: #929ca1;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+  .vehicle-car{
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    color: #012e4b;
+  }
+
+
+  hr{
+      width: 100%;
+      border: 0;          
+      background-color:#ccd4d8;
+      height: 1px;
+      margin: 0;
+}
+
+
+.sign-and-compare-boxes{
+      display: flex;
+      width: 100%;
+      gap:20px;       
+}
+
+.sign-box{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    border-radius: 5px;
+    color: #626c71;
+    padding: 6px 0;
+    font-size: 11px;
+    flex: 2 1 0;
+}
+
+
+.img-eur-flag{
+    margin-right: 6px;
+}
+
+
+.compare-now-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f26e22;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    flex: 1 1 50px;
+}
+
+.section-with-bg-img-hero h1{
+    font-size: 29px;
+}
+
+
+.section-with-bg-img-hero h3{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.section-with-bg-img-hero h5{
+    font-size: 14px;
+    font-weight: 500;
+    color: #626c71;
+}
+
+
+main{
+    width: 100%;
+    height: 1600px;
+    background-color: #fff;
+}
+
+
+
+
+.best-offers-cards-container{
+    display: flex;
+    flex-direction: column;
+    color: #012e4b;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    margin: -28px 7% 0 7%;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+}
+
+
+.best-offers-cards-container h2{
+    margin: 10px 0;
+    font-size: 23px;
+}
+
+
+.carousel-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+
+.swiper{
+    width: 93%;
+}
+
+
+.swiper-button-next, .swiper-button-prev{
+    color: #012e4b;
+}  
+
+
+.carousel-card{
+
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    position: relative;
+}
+
+
+.carousel-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 100;
+    gap: 5px;
+    color: #626c71;
+    font-size: 12px;   
+}
+
+
+.carousel-card p{
+    width: 120px;
+    height: 40px;
+}
+
+
+.carousel-img-companies{
+    width: 115px;
+    height: 68x;
+  }
+
+.carousel-discount{
+    background: #fff;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    border-radius: 5px;
+    width: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f26e22;
+    padding: 10px;
+    margin-bottom: 10px;  
+}
+
+.mobile-header{
+    display: none;
+}
+
+
+@media (max-width: 992px){
+
+    *{
+        margin: 1%;
     }
 
 
-    .desktop-header{ 
+    .desktop-header{
+        display: none;
+    }
+
+
+    .mobile-header{
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         width: 100%;    
         background-color: #fff;
-        padding: 20px 2%;
-        border-bottom: solid gray 1px;
+        padding-bottom: 40px;
         color: #012e4b;
         font-size: 15px;
         font-weight: 500px;
-        width: inherit;
-        position: sticky;
-    }
-
-
-    .img-logo{
-        margin-right: auto;
-    }
-
-
-    .nav-links li {
-        list-style:none; 
-        display: inline-block;
-        padding: 0px 10px;
-    }
-
-
-    li a {
-        text-decoration: none; 
-        color: #012e4b;      
-    }
-
-
-    li a:hover{
-        color: #f26e22;
-    }
-
-
-    .number-phone-box{
-        display: flex;
-        align-items: center;
-        background: #fff;
-        box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-        border-radius: 5px;
-        margin-left: 10px;
-        padding: 15px;
-        gap: 10px;
-    }
-
-      
-
-    .img-phone{        
-        width: 25px;
-        height: 25px;
-    }
-
-
-    .main-links{
-        position: relative;
-    }
-
-
-    .main-links::before{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 0;
-        height: 6px;
-        background-color: #f26e22;
-        transition: width 0.55s ease-out;
-        margin-bottom: -40px;
-    }
-
-
-    .main-links:hover::before{
-        width: 85%;
-    }
-
-
-    .nav-links li:hover .dropdown-menu{
-        display: flex;
-    }
-  
-    
-    .dropdown-menu{       
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        background: #fff;
-        position: absolute;
-        left: -130px;
-        padding: 25px 0;
-        margin-top: 40px;
-        height: 120px;
-        width: 510px;
-        display: none;
-    }
-  
-
-    .dropdown-menu>*{
-        flex: 1 1 40px;
-    }
-
-
-    .contact{
-        color: #f26e22;
-    }
-
-
-    main{
-        display: flex;
-        flex-direction: column;  
     }
 
 
     .section-with-bg-img-hero{
-        display: flex;
-        background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/mr-pricefox-black.jpg");
-        background-position: center;
-        background-size: cover;
-        width: inherit;
-        height: 620px;  
-        align-items: center; 
+        align-items: start; 
+        background-image: none;
+        background-size: none;
     }
-
-
+      
+      
     .box-to-compare-insurance-companies{
-        width: 450px;   
-        background: #fff;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: start;
-        color: #012e4b; 
-        padding: 30px 20px; 
-        margin-left: 8%;
-    }
-
-
-    .vehicle-selection{
-        display: flex;
-        width: 100%;
-        color: #929ca1;
-        font-size: 14px;
-        font-weight: bold;
-        align-items: center;
-        justify-content: space-around;
-      }
-
-
-      .vehicle-car{
-        border-top: 1px solid gray;
-        border-right: 1px solid gray;
-        border-left: 1px solid gray;
-        border-bottom: 1px solid gray;
-        padding: 10px;
-        color: #012e4b;
-      }
-
-
-      hr{
-          width: 100%;
-          border: 0;          
-          background-color:#ccd4d8;
-          height: 1px;
-          margin: 0;
-    }
-
-
-    .sign-and-compare-boxes{
-          display: flex;
-          width: 100%;
-          gap:20px;       
-    }
-
-    .sign-box{
-        display: flex;
-        align-items: center;
-        background: #fff;
+        width: 100%;   
         box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-        border-radius: 5px;
-        color: #626c71;
-        padding: 6px 0;
-        font-size: 11px;
-        flex: 2 1 0;
+        margin-left: 0%;
     }
-
-
-    .img-eur-flag{
-        margin-right: 6px;
+      
+      
+    .box-to-compare-insurance-companies h1{
+        font-size: 25px;
     }
-
-
-    .compare-now-box{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #f26e22;
+      
+      
+    .box-to-compare-insurance-companies h3{
         font-size: 14px;
-        color: white;
-        border-radius: 5px;
-        flex: 1 1 50px;
+    }
+     
+    
+    .sign-and-compare-boxes{
+        flex-direction: column;      
     }
 
-    .section-with-bg-img-hero h1{
-        font-size: 29px;
-    }
-
-
-    .section-with-bg-img-hero h3{
-        font-weight: 500;
-        font-size: 15px;
-    }
-
-
-    .section-with-bg-img-hero h5{
-        font-size: 14px;
-        font-weight: 500;
-        color: #626c71;
-    }
-
-
-    main{
-        width: 100%;
-        height: 1600px;
-        background-color: #fff;
-    }
 
     .carousel-container{
-        display: flex;
-        flex-direction: column;
-        color: #012e4b;
-        text-align: center;
-        background: #fff;
-        border-radius: 10px;
-        margin: -28px 7% 0 7%;
-        box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+        margin: 0;
     }
 
     .carousel-container h2{
-        margin: 10px 0;
-        font-size: 23px;
+        adding: 10px 0;
+        font-size: 20px;
+
     }
 
     .carousel-best-offers-cards{
-        display: flex;
-        padding: 25px;
-        justify-content: space-around;
-    }
+        flex-wrap: wrap;
+        padding: 5px;
+        gap: 5px;
 
-    .carousel-card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 160px;
-        height: 200px;
-        background: #fff;
-        border-radius: 10px;
-        padding: 1%;
-        box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-        color: #626c71;
-        font-size: 13px;
-    }
-
-    .carousel-img-companies{
-        width: 120px;
-        height: 73px;
-      }
-
-    .carousel-discount{
-        background: #fff;
-        box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-        border-radius: 5px;
-        width: 70px;
-        font-size: 20px;
-        font-weight: bold;
-        color: #f26e22;
-        padding: 10px;
-        margin-bottom: 10px;       
-    }
-
-    .mobile-header{
-        display: none;
     }
 
 
-    @media (max-width: 992px){
-
-        *{
-            margin: 1%;
-        }
-
-
-        .desktop-header{
-            display: none;
-        }
-
-
-        .mobile-header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;    
-            background-color: #fff;
-            padding-bottom: 40px;
-            color: #012e4b;
-            font-size: 15px;
-            font-weight: 500px;
-        }
-
-
-        .section-with-bg-img-hero{
-            align-items: start; 
-            background-image: none;
-            background-size: none;
-        }
-          
-          
-        .box-to-compare-insurance-companies{
-            width: 100%;   
-            box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-            margin-left: 0%;
-        }
-          
-          
-        .box-to-compare-insurance-companies h1{
-            font-size: 25px;
-        }
-          
-          
-        .box-to-compare-insurance-companies h3{
-            font-size: 14px;
-        }
-         
-        
-        .sign-and-compare-boxes{
-            flex-direction: column;      
-        }
-
-
-        .carousel-container{
-            margin: 0;
-        }
-
-        .carousel-container h2{
-            adding: 10px 0;
-            font-size: 20px;
     
-        }
 
-        .carousel-best-offers-cards{
-            flex-wrap: wrap;
-            padding: 5px;
-            gap: 5px;
-
-        }
-
-
-        
-
-    }
+}
 
 
 
@@ -386,7 +415,7 @@
 
 
 
-   
+
 
 
 }
