@@ -6,6 +6,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="myscripts.js"></script>
+        
     </head>
     <body>
         <header>
@@ -39,26 +42,28 @@
             </div>               
         </header>
         <main>
-            <div class="section-with-bg-img-hero">
+            <div class="hero-section">
                 
-                <div class="box-to-compare-insurance-companies">
-                    <h1>Οι προσφορές της χρονιάς στην ασφάλεια αυτοκινήτου σου.</h1>
+                <div class="hero-section-cta-compare-insurance-companies">
+                    <h1>Εξοικονόμησε έως 40% στην ασφάλεια αυτοκινήτου σου.</h1>
                     <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>
-                    <div class="vehicle-selection">
-                        <div class="vehicle-car">Αυτοκίνητο</div>
-                        <div class="vehicle">Μηχανή</div>
-                        <div class="vehicle">Αγροτικό</div>
-                        <div class="vehicle">Φορτηγό</div>
-                    </div>
-                    <hr>
-                    <div class="sign-and-compare-boxes">
-                        <div class="sign-box">
-                            <img class="img-eur-flag" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png"/>
-                            <p>Βάλε την πινακίδα σου εδώ</p>
-                          </div>
-                        <div class="compare-now-box">
-                            <p>Σύγκρινε τώρα</p>
+                    <div class="hero-section-license-form-container">
+                        <div id="hero-section-vehicle-selection">
+                            <button  id='car'   class="hero-section-vehicle">Αυτοκίνητο</button>
+                            <button  id='moto'  class="hero-section-vehicle">Μηχανή</button>
+                            <button  id='rural' class="hero-section-vehicle">Αγροτικό</button>
+                            <button  id='truck' class="hero-section-vehicle">Φορτηγό</button>
                         </div>
+                    <hr>
+                    <div class="hero-section-cta-sign-and-compare"> 
+                        <div id="explainlicense"></div>                      
+                        <form method="post" action="/"> 
+                            <span data-descr="Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245">                       
+                               <input type="text" minlength="7" value maxlength="7" pattern="^[a-zA-Z]{3}\d{4}$" id="license-plate"  name="license-plate"  placeholder="Βάλε την πινακίδα σου εδώ" required>                                                           
+                            </span>                               
+                            <button type="submit" onclick="license()">Σύγκρινε τώρα</button>                             
+                        </form>
+                    </div>
                     </div>
                     <h5>Δε θυμάσαι την πινακίδα σου; Βάλε ΧΧΧ1234 για να δεις ενδεικτικές προσφορές.</h5>
                 </div>
@@ -112,22 +117,21 @@
                 </div>    
             </div>            
         </main>
-        
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
         <script>
-          var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 5,
-            spaceBetween: 45,
-            slidesPerGroup: 5,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-          });
-        </script>
 
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 5,
+                spaceBetween: 45,
+                slidesPerGroup: 5,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+              });
+            
+        </script>
     </body>
 </html>    

@@ -2,7 +2,7 @@ body{
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    
     font-family: Helvetica,Arial,sans-serif;
 }
 
@@ -67,6 +67,7 @@ li a:hover{
 
 .main-links{
     position: relative;
+
 }
 
 
@@ -88,7 +89,8 @@ li a:hover{
 
 
 .nav-links li:hover .dropdown-menu{
-    display: flex;
+    visibility: visible;     
+
 }
 
 
@@ -103,7 +105,9 @@ li a:hover{
     margin-top: 40px;
     height: 120px;
     width: 510px;
-    display: none;
+    visibility: hidden;
+    transition: all ease-out 0.9s;
+    
 }
 
 
@@ -123,7 +127,7 @@ main{
 }
 
 
-.section-with-bg-img-hero{
+.hero-section{
     display: flex;
     background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/mr-pricefox-black.jpg");
     background-position: center;
@@ -134,75 +138,154 @@ main{
 }
 
 
-.box-to-compare-insurance-companies{
-    width: 450px;   
+.hero-section-cta-compare-insurance-companies{
+    width: 445px;   
     background: #fff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     align-items: start;
     color: #012e4b; 
     padding: 30px 20px; 
     margin-left: 8%;
+    box-sizing: border-box;
+}
+
+.hero-section-license-form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;   
+    box-sizing: border-box;  
+    gap: 10px; 
 }
 
 
-.vehicle-selection{
+#hero-section-vehicle-selection{
     display: flex;
     width: 100%;
     color: #929ca1;
     font-size: 14px;
     font-weight: bold;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;  
+    gap: 20px;
   }
 
 
-  .vehicle-car{
-    border-top: 1px solid gray;
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
-    border-bottom: 1px solid gray;
-    padding: 10px;
-    color: #012e4b;
+.hero-section-vehicle{
+    border: none;
+    background:none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #a5a4a4;
+    
   }
+
+  #ar{
+    
+    order: 1px solid white; 
+    padding: 10px 8px 10px 8px;
+    border-radius: 5px;
+    argin: 0;
+  }
+
+  #car:focus{
+    border: 1px solid rgba(187,192,209,.4);
+    padding: 10px 8px 10px 40px;
+    background: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-car.png") no-repeat center;
+    background-size: 26px 14px;
+    background-position: 8%;
+    border-radius: 5px;
+    color: #012e4b; 
+  }
+
+  #moto:focus{
+    border: 1px solid rgba(187,192,209,.4);
+    padding: 10px 8px 10px 40px;
+    background: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-moto.png") no-repeat center;
+    background-size: 26px 14px;
+    background-position: 8%;
+    border-radius: 5px;
+    color: #012e4b; 
+  }
+
+  #rural:focus{
+    border: 1px solid rgba(187,192,209,.4);
+    padding: 10px 8px 10px 40px;
+    background: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-farm-truck.png") no-repeat center;
+    background-size: 26px 14px;
+    background-position: 8%;
+    border-radius: 5px;
+    color: #012e4b; 
+  }
+
+  #truck:focus{
+    border: 1px solid rgba(187,192,209,.4);
+    padding: 10px 8px 10px 40px;
+    background: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-truck.png") no-repeat center;
+    background-size: 26px 14px;
+    background-position: 8%;
+    border-radius: 5px;
+    color: #012e4b; 
+  }
+
 
 
   hr{
       width: 100%;
       border: 0;          
-      background-color:#ccd4d8;
+      background-color:rgba(187,192,209,.4);
       height: 1px;
-      margin: 0;
+
+}
+
+.hero-section-cta-sign-and-compare{
+    width: 100%;  
 }
 
 
-.sign-and-compare-boxes{
+.hero-section-cta-sign-and-compare form{
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
-      gap:20px;       
+      gap:20px; 
+      align-items: center;          
+      
 }
 
-.sign-box{
+
+
+.hero-section-cta-sign-and-compare form span input{
     display: flex;
     align-items: center;
     background: #fff;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
     border-radius: 5px;
     color: #626c71;
-    padding: 6px 0;
-    font-size: 11px;
+    font-size: 12px;
     flex: 2 1 0;
+    border: none;
+    height: 50px;
+    width: 170px;
+    
 }
 
 
-.img-eur-flag{
-    margin-right: 6px;
+
+
+#license-plate:focus{
+    outline: none;
+}
+
+#license-plate{
+    padding-left: 50px;
+    background: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png") no-repeat left;
 }
 
 
-.compare-now-box{
+
+.hero-section-cta-sign-and-compare form button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,24 +294,42 @@ main{
     color: white;
     border-radius: 5px;
     flex: 1 1 50px;
+    border: none;
+    height: 50px;
 }
 
-.section-with-bg-img-hero h1{
+.hero-section-cta-compare-insurance-companies h1{
     font-size: 29px;
+    margin: 0;
 }
 
 
-.section-with-bg-img-hero h3{
+.hero-section-cta-compare-insurance-companies h3{
     font-weight: 500;
     font-size: 15px;
+    margin: 0;
 }
 
 
-.section-with-bg-img-hero h5{
+.hero-section-cta-compare-insurance-companies h5{
     font-size: 14px;
     font-weight: 500;
     color: #626c71;
+    margin: 0;
 }
+
+#explainlicense{
+    background : white;
+    display: flex;
+    width: 280px;
+    border: 1px solid black;
+    color: black;
+    display: none;
+    font-size: 13px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border-radius: 5px;         
+}  
 
 
 main{
@@ -268,6 +369,11 @@ main{
 
 .swiper{
     width: 93%;
+    padding: 5px;
+    
+
+    border: 1px solid gray;
+ 
 }
 
 
@@ -324,6 +430,28 @@ main{
 .mobile-header{
     display: none;
 }
+
+
+
+span[data-descr] {
+    position: relative;
+    cursor: help;
+  }
+  
+  span[data-descr]:hover::after,
+  span[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 54px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+  }
 
 
 @media (max-width: 992px){
