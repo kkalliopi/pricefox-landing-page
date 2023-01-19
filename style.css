@@ -19,7 +19,9 @@ body{
     font-size: 15px;
     font-weight: 500px;
     width: inherit;
+    position: -webkit-sticky;
     position: sticky;
+    top: 0;
 }
 
 
@@ -152,16 +154,9 @@ main{
     box-sizing: border-box;
 }
 
-.hero-section-license-form-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;   
-    box-sizing: border-box;  
-    gap: 10px; 
-}
 
 
-#hero-section-vehicle-selection{
+#hero-section-cta-vehicle-selection{
     display: flex;
     width: 100%;
     color: #929ca1;
@@ -178,17 +173,9 @@ main{
     background:none;
     font-size: 14px;
     font-weight: 600;
-    color: #a5a4a4;
-    
+    color: #a5a4a4;   
   }
 
-  #ar{
-    
-    order: 1px solid white; 
-    padding: 10px 8px 10px 8px;
-    border-radius: 5px;
-    argin: 0;
-  }
 
   #car:focus{
     border: 1px solid rgba(187,192,209,.4);
@@ -232,13 +219,15 @@ main{
 
 
 
-  hr{
-      width: 100%;
-      border: 0;          
-      background-color:rgba(187,192,209,.4);
-      height: 1px;
+hr{
+    width: 100%;
+    border: 0;          
+    background-color:rgba(187,192,209,.4);
+    height: 1px;
 
 }
+
+
 
 .hero-section-cta-sign-and-compare{
     width: 100%;  
@@ -247,16 +236,13 @@ main{
 
 .hero-section-cta-sign-and-compare form{
       display: flex;
-      flex-wrap: wrap;
       width: 100%;
       gap:20px; 
-      align-items: center;          
-      
+      align-items: center;                
 }
 
 
-
-.hero-section-cta-sign-and-compare form span input{
+.hero-section-cta-sign-and-compare input{
     display: flex;
     align-items: center;
     background: #fff;
@@ -264,15 +250,25 @@ main{
     border-radius: 5px;
     color: #626c71;
     font-size: 12px;
-    flex: 2 1 0;
     border: none;
     height: 50px;
-    width: 170px;
-    
+    width: 170px;   
 }
 
 
 
+.hero-section-cta-sign-and-compare  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f26e22;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width: 155px;
+}
 
 #license-plate:focus{
     outline: none;
@@ -284,19 +280,24 @@ main{
 }
 
 
-
-.hero-section-cta-sign-and-compare form button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f26e22;
-    font-size: 14px;
-    color: white;
-    border-radius: 5px;
-    flex: 1 1 50px;
-    border: none;
-    height: 50px;
+.error {      
+    padding: 0;
+    border: 1px solid black;
+    font-size: 13px;
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: none;
 }
+
+.error.active {
+   padding: 0.3em;
+   display: flex;
+   width: 300px;
+   margin: 0 auto;  
+}
+
 
 .hero-section-cta-compare-insurance-companies h1{
     font-size: 29px;
@@ -318,18 +319,7 @@ main{
     margin: 0;
 }
 
-#explainlicense{
-    background : white;
-    display: flex;
-    width: 280px;
-    border: 1px solid black;
-    color: black;
-    display: none;
-    font-size: 13px;
-    padding: 10px;
-    margin: 0 0 10px 0;
-    border-radius: 5px;         
-}  
+
 
 
 main{
@@ -340,106 +330,30 @@ main{
 
 
 
-
-.best-offers-cards-container{
-    display: flex;
-    flex-direction: column;
-    color: #012e4b;
-    text-align: center;
-    background: #fff;
-    border-radius: 10px;
-    margin: -28px 7% 0 7%;
-    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-}
-
-
-.best-offers-cards-container h2{
-    margin: 10px 0;
-    font-size: 23px;
-}
-
-
-.carousel-container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 20px 0;
-}
-
-
-.swiper{
-    width: 93%;
-    padding: 5px;
-    
-
-    border: 1px solid gray;
- 
-}
-
-
-.swiper-button-next, .swiper-button-prev{
-    color: #012e4b;
-}  
-
-
-.carousel-card{
-
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-    position: relative;
-}
-
-
-.carousel-card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    z-index: 100;
-    gap: 5px;
-    color: #626c71;
-    font-size: 12px;   
-}
-
-
-.carousel-card p{
-    width: 120px;
-    height: 40px;
-}
-
-
-.carousel-img-companies{
-    width: 115px;
-    height: 68x;
-  }
-
-.carousel-discount{
-    background: #fff;
-    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-    border-radius: 5px;
-    width: 70px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #f26e22;
-    padding: 10px;
-    margin-bottom: 10px;  
-}
-
 .mobile-header{
     display: none;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 span[data-descr] {
     position: relative;
     cursor: help;
-  }
+}
   
-  span[data-descr]:hover::after,
-  span[data-descr]:focus::after {
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
     content: attr(data-descr);
     position: absolute;
     left: 0;
@@ -451,7 +365,13 @@ span[data-descr] {
     color: #000000;
     font-size: 14px;
     z-index: 1;
-  }
+}
+
+
+
+
+
+
 
 
 @media (max-width: 992px){
@@ -477,55 +397,6 @@ span[data-descr] {
         font-size: 15px;
         font-weight: 500px;
     }
-
-
-    .section-with-bg-img-hero{
-        align-items: start; 
-        background-image: none;
-        background-size: none;
-    }
-      
-      
-    .box-to-compare-insurance-companies{
-        width: 100%;   
-        box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-        margin-left: 0%;
-    }
-      
-      
-    .box-to-compare-insurance-companies h1{
-        font-size: 25px;
-    }
-      
-      
-    .box-to-compare-insurance-companies h3{
-        font-size: 14px;
-    }
-     
-    
-    .sign-and-compare-boxes{
-        flex-direction: column;      
-    }
-
-
-    .carousel-container{
-        margin: 0;
-    }
-
-    .carousel-container h2{
-        adding: 10px 0;
-        font-size: 20px;
-
-    }
-
-    .carousel-best-offers-cards{
-        flex-wrap: wrap;
-        padding: 5px;
-        gap: 5px;
-
-    }
-
-
     
 
 }
@@ -546,4 +417,6 @@ span[data-descr] {
 
 
 
-}
+
+
+ 
