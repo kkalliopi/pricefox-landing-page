@@ -46,92 +46,60 @@
                 
                 <div class="hero-section-cta-compare-insurance-companies">
                     <h1>Εξοικονόμησε έως 40% στην ασφάλεια αυτοκινήτου σου.</h1>
-                    <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>
-                    <div class="hero-section-license-form-container">
-                        <div id="hero-section-vehicle-selection">
-                            <button  id='car'   class="hero-section-vehicle">Αυτοκίνητο</button>
-                            <button  id='moto'  class="hero-section-vehicle">Μηχανή</button>
-                            <button  id='rural' class="hero-section-vehicle">Αγροτικό</button>
-                            <button  id='truck' class="hero-section-vehicle">Φορτηγό</button>
-                        </div>
+                    <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>                 
+                    <div id="hero-section-cta-vehicle-selection">
+                        <button  id='car'   class="hero-section-vehicle">Αυτοκίνητο</button>
+                        <button  id='moto'  class="hero-section-vehicle">Μηχανή</button>
+                        <button  id='rural' class="hero-section-vehicle">Αγροτικό</button>
+                        <button  id='truck' class="hero-section-vehicle">Φορτηγό</button>
+                    </div>
                     <hr>
                     <div class="hero-section-cta-sign-and-compare"> 
-                        <div id="explainlicense"></div>                      
-                        <form method="post" action="/"> 
-                            <span data-descr="Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245">                       
-                               <input type="text" minlength="7" value maxlength="7" pattern="^[a-zA-Z]{3}\d{4}$" id="license-plate"  name="license-plate"  placeholder="Βάλε την πινακίδα σου εδώ" required>                                                           
-                            </span>                               
-                            <button type="submit" onclick="license()">Σύγκρινε τώρα</button>                             
-                        </form>
-                    </div>
+                        <div class="error" ></div>
+                        <form novalidate>
+                            <label for="license-plate">
+                                <input type="text" id="license-plate"  maxLength="7" minLength="7" pattern="^[a-zA-Z]{3}\d{4}$" placeholder="Βάλε την πινακίδα σου εδώ"  required/>                            
+                            </label>
+                            <button type="submit" onclick="license()">Σύγκρινε τώρα</button>            
+                         </form>                    
                     </div>
                     <h5>Δε θυμάσαι την πινακίδα σου; Βάλε ΧΧΧ1234 για να δεις ενδεικτικές προσφορές.</h5>
                 </div>
             </div>  
-            <div class="best-offers-cards-container">
-                <h2>Μην χάσεις στο Pricefox τις καλύτερες προσφορές της αγοράς!</h2>
-                <hr>
-                <div class="carousel-container">
-                    <div class="swiper mySwiper container">
-                        <div class="swiper-wrapper content">
-
-                            <div class="swiper-slide carousel-card">
-                                <div class="carousel-card-content">
-                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/myZen.webp"/>
-                                    <div class="carousel-discount">$35</div>
-                                    <p>Δώρο καυσίμων έως 35€ μέχρι 31/12</p> 
-                                </div>                       
-                            </div>
-                            <div class="swiper-slide carousel-card"> 
-                                <div class="carousel-card-content">                     
-                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/anytime.webp"/>
-                                    <div class="carousel-discount">-40%</div>
-                                    <p>σε όλα τα ετήσια συμβόλαια</p>  
-                                </div>                        
-                            </div>
-                            <div class="swiper-slide carousel-card"> 
-                                <div class="carousel-card-content">                    
-                                   <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/anytime.webp"/>
-                                   <div class="carousel-discount">-5%</div>
-                                   <p>για πελάτες COSMOTE</p>  
-                                </div>                      
-                            </div>
-                            <div class="swiper-slide carousel-card">
-                                <div class="carousel-card-content">                     
-                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/accredited.webp"/>
-                                    <div class="carousel-discount">-30%</div>
-                                    <p>σε όλα τα ετήσια συμβόλαια</p>  
-                                </div>                   
-                            </div>
-                            <div class="swiper-slide carousel-card"> 
-                                <div class="carousel-card-content">                   
-                                    <img class="carousel-img-companies" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/providerLogos/120pixels_webp/apeiron.webp"/>
-                                    <div class="carousel-discount">-30%</div>
-                                    <p>για όλες τις επαρχιακές περιοχές μέχρι 31/12</p>  
-                                </div>                     
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>    
-            </div>            
-        </main>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        </main>   
+        
         <script>
-
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 5,
-                spaceBetween: 45,
-                slidesPerGroup: 5,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                navigation: {
-                  nextEl: ".swiper-button-next",
-                  prevEl: ".swiper-button-prev",
-                },
-              });
-            
+            const form = document.querySelector("form");
+            const sign = document.getElementById("license-plate");
+            const signError = document.querySelector("div.error");
+                        
+            sign.addEventListener("input", (event) => {
+                        
+                if (sign.validity.valid) {
+                    signError.textContent = ""; 
+                    signError.className = "error";
+                } else {
+                    showError();
+                }
+            });
+                        
+            form.addEventListener("submit", (event) => {
+                          
+                if (!sign.validity.valid) {
+                    showError();
+                    event.preventDefault();
+                }
+            });
+                        
+            function showError() {
+                if (sign.validity.valueMissing) {
+                    signError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245";
+                } else if (sign.validity.tooShort) {
+                     signError.textContent = `Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245 `;
+                } 
+                signError.className = "error active";
+            }
+                         
         </script>
     </body>
 </html>    
