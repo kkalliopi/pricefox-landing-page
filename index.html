@@ -60,7 +60,7 @@
                             <label for="license-plate">
                                 <input type="text" id="license-plate"  maxLength="7" minLength="7" pattern="^[a-zA-Z]{3}\d{4}$" placeholder="Βάλε την πινακίδα σου εδώ"  required/>                            
                             </label>
-                            <button type="submit" onclick="license()">Σύγκρινε τώρα</button>            
+                            <button type="submit">Σύγκρινε τώρα</button>            
                          </form>                    
                     </div>
                     <h5>Δε θυμάσαι την πινακίδα σου; Βάλε ΧΧΧ1234 για να δεις ενδεικτικές προσφορές.</h5>
@@ -69,6 +69,7 @@
         </main>   
         
         <script>
+            // adding addEventListener() to the button of hero-section-cta-sign-and-compare form
             const form = document.querySelector("form");
             const sign = document.getElementById("license-plate");
             const signError = document.querySelector("div.error");
