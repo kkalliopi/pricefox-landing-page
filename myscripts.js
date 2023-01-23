@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5bdb38cc0898232157949a8558ccbeac4cc34722
 function init(){
    const buttons =  document.querySelectorAll(".hero-section-vehicle");
    for (var i = 0; i < buttons.length; i += 1) {
@@ -22,12 +18,4 @@ function changeColor( e ){
 }
 
 window.onload = init();
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
->>>>>>> 5bdb38cc0898232157949a8558ccbeac4cc34722

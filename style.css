@@ -237,26 +237,34 @@ hr{
       display: flex;
       width: 100%;
       gap:20px; 
-      align-items: center;                
+      align-items: center;             
 }
 
 
-.hero-section-cta-sign-and-compare input{
+.hero-section-cta-sign-and-compare form input{
     display: flex;
     align-items: center;
     background: #fff;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    padding-left: 45px;
     border-radius: 5px;
     color: #626c71;
     font-size: 12px;
     border: none;
     height: 50px;
-    width: 170px;   
+    width: 180px;   
+}
+
+.hero-section-cta-sign-and-compare input:focus{
+    outline: none;
 }
 
 
 
-.hero-section-cta-sign-and-compare  button{
+.hero-section-cta-sign-and-compare form button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,6 +274,26 @@ hr{
     border-radius: 5px;
     border: none;
     height: 50px;
+    width: 160px;
+}
+
+
+.error {      
+    padding: 0.3rem;
+    border: 1px solid black;
+    font-size: 13px;
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.error.active{
+    display: flex;
 }
 
 
