@@ -47,7 +47,7 @@
                 <div class="hero-section-cta-compare-insurance-companies">
                     <h1>Εξοικονόμησε έως 40% στην ασφάλεια αυτοκινήτου σου.</h1>
                     <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>                 
-                    <div class="hero-section-cta-vehicle-selection">
+                    <div id="hero-section-cta-vehicle-selection">
                         <button  id='car'   class="hero-section-vehicle">Αυτοκίνητο</button>
                         <button  id='moto'  class="hero-section-vehicle">Μηχανή</button>
                         <button  id='rural' class="hero-section-vehicle">Αγροτικό</button>
@@ -73,8 +73,7 @@
             const form = document.querySelector("form");
             const sign = document.getElementById("license-plate");
             const signError = document.querySelector("div.error");
-             
-            //check if the value in the input field is valid.If it is and there is a visible message,hide it.Otherwise show the error message.
+                        
             sign.addEventListener("input", (event) => {
                         
                 if (sign.validity.valid) {
@@ -84,7 +83,7 @@
                     showError();
                 }
             });
-            //check if the value is valid,let the form submit.Otherwise show the error message and prevent from submit by canceling the event.          
+                        
             form.addEventListener("submit", (event) => {
                           
                 if (!sign.validity.valid) {
@@ -92,8 +91,7 @@
                     event.preventDefault();
                 }
             });
-            
-            //show the error message if the value is missing or if it's too short
+                        
             function showError() {
                 if (sign.validity.valueMissing) {
                     signError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245";

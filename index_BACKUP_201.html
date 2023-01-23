@@ -47,7 +47,7 @@
                 <div class="hero-section-cta-compare-insurance-companies">
                     <h1>Εξοικονόμησε έως 40% στην ασφάλεια αυτοκινήτου σου.</h1>
                     <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>                 
-                    <div class="hero-section-cta-vehicle-selection">
+                    <div id="hero-section-cta-vehicle-selection">
                         <button  id='car'   class="hero-section-vehicle">Αυτοκίνητο</button>
                         <button  id='moto'  class="hero-section-vehicle">Μηχανή</button>
                         <button  id='rural' class="hero-section-vehicle">Αγροτικό</button>
@@ -60,7 +60,11 @@
                             <label for="license-plate">
                                 <input type="text" id="license-plate"  maxLength="7" minLength="7" pattern="^[a-zA-Z]{3}\d{4}$" placeholder="Βάλε την πινακίδα σου εδώ"  required/>                            
                             </label>
+<<<<<<< HEAD
                             <button type="submit">Σύγκρινε τώρα</button>            
+=======
+                            <button type="submit" onclick="license()">Σύγκρινε τώρα</button>            
+>>>>>>> 5bdb38cc0898232157949a8558ccbeac4cc34722
                          </form>                    
                     </div>
                     <h5>Δε θυμάσαι την πινακίδα σου; Βάλε ΧΧΧ1234 για να δεις ενδεικτικές προσφορές.</h5>
@@ -69,12 +73,14 @@
         </main>   
         
         <script>
+<<<<<<< HEAD
             // adding addEventListener() to the button of hero-section-cta-sign-and-compare form
+=======
+>>>>>>> 5bdb38cc0898232157949a8558ccbeac4cc34722
             const form = document.querySelector("form");
             const sign = document.getElementById("license-plate");
             const signError = document.querySelector("div.error");
-             
-            //check if the value in the input field is valid.If it is and there is a visible message,hide it.Otherwise show the error message.
+                        
             sign.addEventListener("input", (event) => {
                         
                 if (sign.validity.valid) {
@@ -84,7 +90,7 @@
                     showError();
                 }
             });
-            //check if the value is valid,let the form submit.Otherwise show the error message and prevent from submit by canceling the event.          
+                        
             form.addEventListener("submit", (event) => {
                           
                 if (!sign.validity.valid) {
@@ -92,8 +98,7 @@
                     event.preventDefault();
                 }
             });
-            
-            //show the error message if the value is missing or if it's too short
+                        
             function showError() {
                 if (sign.validity.valueMissing) {
                     signError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245";
@@ -106,3 +111,4 @@
         </script>
     </body>
 </html>    
+

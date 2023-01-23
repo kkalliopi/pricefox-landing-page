@@ -19,7 +19,6 @@ body{
     font-size: 15px;
     font-weight: 500px;
     width: inherit;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
@@ -267,35 +266,6 @@ hr{
     border-radius: 5px;
     border: none;
     height: 50px;
-    width: 155px;
-}
-
-#license-plate:focus{
-    outline: none;
-}
-
-#license-plate{
-    padding-left: 50px;
-    background: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png") no-repeat left;
-}
-
-
-.error {      
-    padding: 0.3em;
-    border: 1px solid black;
-    font-size: 13px;
-    color: black;
-    background-color: #fff;
-    border-radius: 10px;
-    box-sizing: border-box;
-    display: none;
-    margin: 0 auto;
-    width: 300px;
-    margin-bottom: 30px;
-}
-
-.error.active {
-   display: flex;   
 }
 
 
@@ -412,8 +382,22 @@ span[data-descr]:focus::after {
 
 
 
+    
+
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+ 
