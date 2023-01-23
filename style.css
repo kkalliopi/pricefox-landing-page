@@ -163,7 +163,7 @@ main{
     font-weight: bold;
     align-items: center;
     justify-content: space-around;  
-    gap: 20px;
+    gap: 20px; 
   }
 
 
@@ -172,7 +172,7 @@ main{
     background:none;
     font-size: 14px;
     font-weight: 600;
-    color: #a5a4a4;   
+    color: #a5a4a4; 
   }
 
 
@@ -222,8 +222,7 @@ hr{
     width: 100%;
     border: 0;          
     background-color:rgba(187,192,209,.4);
-    height: 1px;
-
+    height: 1px; 
 }
 
 
@@ -237,44 +236,48 @@ hr{
       display: flex;
       width: 100%;
       gap:20px; 
-      align-items: center;             
+      align-items: center;                 
 }
 
 
-.hero-section-cta-sign-and-compare form input{
+
+.hero-section-cta-license-plate-input{
     display: flex;
     align-items: center;
     background: #fff;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-    background-image: url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png");
-    background-repeat: no-repeat;
-    background-position: 5px;
-    padding-left: 45px;
     border-radius: 5px;
     color: #626c71;
     font-size: 12px;
+    height: 50px;   
+    padding-left: 5px;
+    flex: 2 1 0;
+    position: relative;   
+}
+
+.hero-section-cta-sign-and-compare input{
     border: none;
-    height: 50px;
-    width: 180px;   
+    padding-left: 5px;
+    height: 30px;  
 }
 
 .hero-section-cta-sign-and-compare input:focus{
-    outline: none;
+    outline: none;   
 }
 
 
-
-.hero-section-cta-sign-and-compare form button{
+.hero-section-cta-sign-and-compare button{
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f26e22;
     font-size: 14px;
+    font-weight: bold;
     color: white;
     border-radius: 5px;
     border: none;
     height: 50px;
-    width: 160px;
+    flex: 1 1 50px;
 }
 
 
@@ -287,13 +290,15 @@ hr{
     border-radius: 10px;
     box-sizing: border-box;
     display: none;
-    margin: 0 auto;
-    margin-bottom: 20px;
     width: 300px;
+    position: absolute;
+    z-index: 1;
+    margin: -65px 0 0 60px;   
 }
 
 .error.active{
     display: flex;
+    
 }
 
 
