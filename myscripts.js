@@ -1,4 +1,6 @@
+"use strict";
 
+//choose all vehicles in hero-section-cta-vehicle-selection class to addEventListener click
 function init(){
    const buttons =  document.querySelectorAll(".hero-section-vehicle");
    for (var i = 0; i < buttons.length; i += 1) {
@@ -8,21 +10,31 @@ function init(){
    }
 } 
 
-
-
-
+//Style the selected vehicle as well as the rest of the vehicles
 function chooseVehicle( e ){
-   const buttons =  document.querySelectorAll(".hero-section-vehicle");
-   for( var i =0; i < buttons.length; ++i ){
-       buttons[i].style.color = '#737373';
+   const vehicles =  document.querySelectorAll(".hero-section-vehicle");
+   for( var i =0; i < vehicles.length; ++i ){
+      vehicles[i].style.color = '#737373';
+      vehicles[i].style = '';
+
    }
    e.target.style.color = '#012e4b';
+   e.target.style.border = '1px solid rgba(187,192,209,.4)';
+   e.target.style.padding = '10px 8px 10px 40px';
+   e.target.style.background = 'url("https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-car.png") no-repeat center';
+   e.target.style.backgroundSize = '26px 14px';
+   e.target.style.backgroundPosition = '8%';
+   e.target.style.borderRadius = '5px';
 }
 
-window.onload = init();
 
 
-window.onload=function(){
+window.onload =  init();
+
+
+
+
+
 
   // adding addEventListener() to the button of hero-section-cta-sign-and-compare form
   const form = document.querySelector("form");
@@ -60,4 +72,3 @@ window.onload=function(){
       signError.className = "error active";
   }
 
-}
