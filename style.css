@@ -1,8 +1,7 @@
 body{
     width: 100%;
     height: 100%;
-    margin: 0;
-    
+    margin: 0;   
     font-family: Helvetica,Arial,sans-serif;
 }
 
@@ -10,44 +9,44 @@ body{
 .desktop-header{ 
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    width: 100%;    
+    align-items: center;  
     background-color: #fff;
     padding: 20px 2%;
-    border-bottom: solid gray 1px;
     color: #012e4b;
     font-size: 15px;
-    font-weight: 500px;
-    width: inherit;
-    position: sticky;
+    font-weight: 600px;
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;   
     top: 0;
 }
 
 
-.img-logo{
+
+.desktop-header-img-logo{
     margin-right: auto;
 }
 
 
-.nav-links li {
+.desktop-header-nav-links li {
     list-style:none; 
     display: inline-block;
     padding: 0px 10px;
 }
 
 
-li a {
+.desktop-header-nav-links li a {
     text-decoration: none; 
     color: #012e4b;      
 }
 
 
-li a:hover{
+.desktop-header-nav-links li a:hover{
     color: #f26e22;
 }
 
 
-.number-phone-box{
+.desktop-header-number-phone-box{
     display: flex;
     align-items: center;
     background: #fff;
@@ -60,19 +59,19 @@ li a:hover{
 
   
 
-.img-phone{        
+.desktop-header-img-phone{        
     width: 25px;
     height: 25px;
 }
 
 
-.main-links{
+.desktop-header-main-links{
     position: relative;
 
 }
 
 
-.main-links::before{
+.desktop-header-main-links::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -84,18 +83,18 @@ li a:hover{
 }
 
 
-.main-links:hover::before{
+.desktop-header-main-links:hover::before{
     width: 85%;
 }
 
 
-.nav-links li:hover .dropdown-menu{
+.desktop-header-nav-links li:hover .desktop-header-dropdown-menu{
     visibility: visible;     
 
 }
 
 
-.dropdown-menu{       
+.desktop-header-dropdown-menu{       
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -107,17 +106,16 @@ li a:hover{
     height: 120px;
     width: 510px;
     visibility: hidden;
-    transition: all ease-out 0.9s;
-    
+    transition: all ease-out 0.9s;   
 }
 
 
-.dropdown-menu>*{
+.desktop-header-dropdown-menu>*{
     flex: 1 1 40px;
 }
 
 
-.contact{
+.desktop-header-contact{
     color: #f26e22;
 }
 
@@ -125,6 +123,7 @@ li a:hover{
 main{
     display: flex;
     flex-direction: column;  
+    margin-top: 50px;
 }
 
 
