@@ -19,6 +19,7 @@ body{
     width: 100%;
     position: fixed;   
     top: 0;
+    z-index: 1;
 }
 
 
@@ -144,7 +145,7 @@ main{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     align-items: start;
     color: #012e4b; 
     padding: 30px 20px; 
@@ -180,6 +181,8 @@ hr{
     border: 0;          
     background-color:rgba(187,192,209,.4);
     height: 1px; 
+    margin: 0;
+  
 }
 
 
@@ -192,7 +195,8 @@ hr{
       display: flex;
       width: 100%;
       gap:20px; 
-      align-items: center;                 
+      align-items: center;   
+            
 }
 
 
@@ -280,11 +284,136 @@ hr{
 
 
 
+
+
 main{
     width: 100%;
     height: 1600px;
     background-color: #fff;
 }
+
+        
+
+.best-offers-cards-container{
+    display: flex;
+    flex-direction: column;
+    color: #012e4b;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    margin: -28px 7% 0 7%;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+
+}
+
+
+.best-offers-cards-container h2{
+    margin: 10px 0;
+    font-size: 23px;
+}
+
+
+
+.carousel-wrapper {
+    
+    position: relative;
+    padding: 3% 2% 3% 2%;
+}
+
+
+
+.carousel-container{
+    display: flex; 
+    eight: 250px;
+    align-items: center;
+    flex: 1 1 0;
+    gap: 40px;
+    width: 100%;
+    padding: 20px 0;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+.carousel-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 5px;
+    color: #626c71;
+    font-size: 12px;  
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    height: 170px;
+    flex: 1 0 130px;
+}
+
+
+.carousel-card p{
+    width: 120px;
+    height: 40px;
+}
+
+
+.carousel-img-companies{
+    width: 115px;
+    height: 68x;
+  }
+
+  
+.carousel-discount{
+    background: #fff;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    border-radius: 5px;
+    width: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f26e22;
+    padding: 10px;
+    margin-bottom: 10px;  
+}
+
+
+
+
+.carousel-arrow {
+    position: absolute;
+    display: flex;
+    color: #012e4b; 
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: none;
+    width: 25px;
+    height: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    background: none;
+
+
+  }
+ 
+  #carousel-arrow-prev {
+    left: 0;
+    padding-right: 2px;
+
+  }
+  #carousel-arrow-next {
+    right: 0;
+    padding-right: 2px;
+
+  }
+
+
+
+
 
 
 
@@ -335,7 +464,7 @@ main{
 
     
 
-}
+
 
 
 

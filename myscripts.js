@@ -69,6 +69,29 @@ window.onload =  init();
       } else if (sign.validity.tooShort) {
            signError.textContent = `Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245 `;
       } 
+      signError.textContent = `Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245 `;
       signError.className = "error active";
   }
 
+
+
+
+
+
+
+
+
+
+  const cardContainer = document.querySelector(".carousel-container");
+  const card = document.querySelector(".carousel-card-content");
+  const nextButton = document.getElementById("carousel-arrow-next");
+  const prevButton = document.getElementById("carousel-arrow-prev");
+  
+
+  nextButton.addEventListener("click", () => {
+    cardContainer.scrollLeft += 100;
+  });
+
+  prevButton.addEventListener("click", () => {
+    cardContainer.scrollLeft -= 100;
+  });
