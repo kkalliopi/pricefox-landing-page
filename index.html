@@ -17,7 +17,7 @@
                 <img class="img-phone" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-phone.webp"/>
             </div>
             <div class="desktop-header">
-                <a class="desktop-header-img-logo"  href="www.pricefox.gr"><img src="https://www.pricefox.gr/assets/186x55xlogo_blue-f305111d5646f132431f47b879e2c78e.png.pagespeed.ic.MwpXn1KL-9.webp"/></a>
+                <a class="desktop-header-img-logo"  href="www.pricefox.gr"><img src="https://www.pricefox.gr/assets/logo_blue-f305111d5646f132431f47b879e2c78e.png" title="pricefo logo" alt="Pricefox" width="186" height="55"></a>
                 <nav>
                     <ul class="desktop-header-nav-links">
                         <li class="desktop-header-main-links"><a href="www.pricefox.gr/ασφάλεια αυτοκινήτου">Αγόρασε Online</a></li>
@@ -43,26 +43,33 @@
         <main>
             <div class="hero-section">
                 
-                <div class="hero-section-cta-compare-insurance-companies">
+                <div class="hero-section-compare-insurance-companies-container">
                     <h1>Εξοικονόμησε έως 40% στην ασφάλεια αυτοκινήτου σου.</h1>
-                    <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3>                 
-                    <div id="hero-section-cta-vehicle-selection">
-                        <button  id='car'   class="hero-section-vehicle">Αυτοκίνητο</button>
-                        <button  id='moto'  class="hero-section-vehicle">Μηχανή</button>
-                        <button  id='rural' class="hero-section-vehicle">Αγροτικό</button>
-                        <button  id='truck' class="hero-section-vehicle">Φορτηγό</button>
-                    </div>
-                    <hr>
-                    <div class="hero-section-cta-sign-and-compare"> 
-                        <div class="error" ></div>
-                        <form novalidate>
+                    <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3> 
+                    <form novalidate action="/forest" method="post">
+                        <div id="hero-section-cta-vehicle-selection">
+                            <label for="car"  class="hero-section-vehicle   selected-vehicle"  >Αυτοκίνητο</label>
+                            <input  id='car'   type="radio" name="vehicle"  value="car" checked/>
+
+                            <label for="moto" class="hero-section-vehicle">Μηχανή</label>
+                            <input  id='moto'  type="radio" name="vehicle"  value="moto"/>
+
+                            <label for="farm-truck" class="hero-section-vehicle">Αγροτικό</label>
+                            <input  id='farm-truck' type="radio" name="vehicle"  value="farm-truck"/>
+
+                            <label for="truck" class="hero-section-vehicle">Φορτηγό</label>
+                            <input  id='truck' type="radio" name="vehicle" value="truck"/>
+                        </div>
+                        <hr>
+                        <div id="hero-section-cta-put-plate-and-compare">
+                            <div class="error" ></div>
                             <div class="hero-section-cta-license-plate-input">
                                 <img src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png" alt="gr plate">
                                 <input type="text" id="license-plate"  maxLength="7" minLength="7" pattern="^[a-zA-Z]{3}\d{4}$" placeholder="Βάλε την πινακίδα σου εδώ"  required/>                            
                             </div>
-                            <button type="submit">Σύγκρινε τώρα</button>            
-                         </form>                    
-                    </div>
+                            <button type="submit">Σύγκρινε τώρα</button>              
+                        </div>
+                    </form>    
                     <h5>Δε θυμάσαι την πινακίδα σου; Βάλε ΧΧΧ1234 για να δεις ενδεικτικές προσφορές.</h5>
                 </div>
             </div> 
@@ -132,9 +139,5 @@
             </div>    
         </main>  
       <script src="myscripts.js"></script>
-
-      <script>
-
-      </script>
     </body>
 </html>    
