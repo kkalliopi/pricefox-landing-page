@@ -46,7 +46,7 @@
                 <div class="hero-section-compare-insurance-companies-container">
                     <h1>Εξοικονόμησε έως 40% στην ασφάλεια αυτοκινήτου σου.</h1>
                     <h3>Σύγκρινε όλες τις κορυφαίες ασφαλιστικές και αγόρασε σε 2 λεπτά.</h3> 
-                    <form novalidate action="/forest" method="post">
+                    <form novalidate action="/foo" method="POST">
                         <div id="hero-section-cta-vehicle-selection">
                             <label for="car"  class="hero-section-vehicle   selected-vehicle"  >Αυτοκίνητο</label>
                             <input  id='car'   type="radio" name="vehicle"  value="car" checked/>
@@ -65,7 +65,7 @@
                             <div class="error" ></div>
                             <div class="hero-section-cta-license-plate-input">
                                 <img src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png" alt="gr plate">
-                                <input type="text" id="license-plate"  maxLength="7" minLength="7" pattern="^[a-zA-Z]{3}\d{4}$" placeholder="Βάλε την πινακίδα σου εδώ"  required/>                            
+                                <input type="text" id="license-plate" name="license-plate"  maxLength="7" minLength="7" pattern="^[α-ωΑ-Ω]{3}\d{4}$" placeholder="Βάλε την πινακίδα σου εδώ"  required/>                            
                             </div>
                             <button type="submit">Σύγκρινε τώρα</button>              
                         </div>

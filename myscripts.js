@@ -29,45 +29,59 @@ window.onload =  init();
 
 
 
-// adding addEventListener() to the button of hero-section-cta-sign-and-compare form
+// adding client-side validation  to the hero-section-compare-insurance-companies-container form
 const form = document.querySelector("form");
-const plate = document.getElementById("license-plate");
+const plate = document.querySelector("#license-plate");
 const plateError = document.querySelector(".error");
+const greekAlphabet = /^[α-ωΑ-Ω]+$/;
+const invalidGreekCharacters = /[γδθλξπσφψωΓΔΘΛΞΠΣΦΨΩ]/;
 
-//check if the value in the input field is valid.If it is and there is a visible message,hide it.Otherwise show the error message.
-plate.addEventListener("input", (event) => {
+//1. check if the value in the input field is valid.If it is and there is a visible eror message,hide it.
+//2. check if the value is missing and show the error message.
+//3. check if the first three letters are greek characters and show the error message.
+//4. check for specified greek characters that are not allowed and show the error message.
+//5. check if the first 3 letters are numbers and show the error message.
+plate.addEventListener("input", (e) => {
             
     if (plate.validity.valid) {
         plateError.textContent = ""; 
         plateError.className = "error";
-    } else {
-        showError();
+    }else if(plate.validity.valueMissing) {
+        plateError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245";
+        plateError.className = "error active";
+    }else if (!greekAlphabet.test(e.target.value.slice(0, 3))) {
+        plateError.textContent = "Επιτρέπονται μόνο ελληνικοί χαρακτήρες και αριθμοί πχ.ΙΡΟ3245";
+        plateError.className = "error active";
+        e.target.value = e.target.value.slice(0, -1);
+    }else if (invalidGreekCharacters.test(e.target.value)) {
+        plateError.textContent = "Οι ελληνικοί χαρακτήρες Γ, Δ, Θ, Λ, Ξ, Π, Σ, Φ, Ψ, Ω δεν επιτρέπονται σε συμβατικές πινακίδες.";
+        plateError.className = "error active";
+        e.target.value = e.target.value.replace(invalidGreekCharacters, '');
+    }else (/^[0-9]$/.test(e.target.value.slice(0, 3))) {
+        plateError.textContent = "Οι πρώτοι 3 χαρακτήρες δεν πρέπει να είναι αριθμοί.";
+        plateError.className = "error active";
+        e.target.value = e.target.value.slice(0, -1);
     }
+    e.target.value = e.target.value.toUpperCase();
 });
+ 
 
-
-//check if the value is valid,let the form submit.Otherwise show the error message and prevent from submit by canceling the event.          
+//check if the value is invalid to submit.If it is show the error message and prevent it from submit by canceling the event.          
 form.addEventListener("submit", (event) => {
             
     if (!plate.validity.valid) {
-        showError();
+        plateError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245";
+        plateError.className = "error active";
         event.preventDefault();
     }
 });
 
-//show the error message if the value is missing or if it's too short
-function showError() {
-    if (plate.validity.valueMissing) {
-        plateError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245";
-    } else if (plate.validity.tooShort) {
-        plateError.textContent = `Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245 `;
-    } 
-    plateError.textContent = `Η πινακίδα θα πρέπει να περιέχει 3 γράμματα ακολουθούμενα από 4 αριθμούς,χωρίς κενό ενδιάμεσα,π.χ. IPO3245 `;
-    plateError.className = "error active";
-}
+
+   
 
 
 
+window.onload =  init();
 
 
 
