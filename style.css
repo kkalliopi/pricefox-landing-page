@@ -24,7 +24,6 @@ body{
 }
 
 
-
 .desktop-header-img-logo{
     margin-right: auto;
 }
@@ -226,6 +225,7 @@ hr{
     width: 100%;  
     margin: 0;
     display: flex;
+    gap: 20px; 
 
 }
 
@@ -239,9 +239,9 @@ hr{
     border-radius: 5px;
     color: #626c71;
     font-size: 12px;
-    height: 50px;   
+    height: 50px;  
     padding-left: 5px;
-    flex: 2 1 0;
+    flex: 2 0 0;
     position: relative;   
 }
 
@@ -272,7 +272,7 @@ hr{
     border-radius: 5px;
     border: none;
     height: 50px;
-    flex: 1 1 20px;
+    flex: 1 0 0;
 }
 
 
@@ -287,8 +287,8 @@ hr{
     display: none;
     width: 300px;
     position: absolute;
-    z-index: 1;
-    margin: -60px 0 0 60px;   
+    z-index: 1;   
+    margin: -60px 0 0 60px;    
 }
 
 .error.active{
@@ -336,21 +336,21 @@ hr{
     border-radius: 10px;
     margin: -28px 7% 0 7%;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-
 }
 
 
 .best-offers-cards-container h2{
-    margin: 10px 0;
+    margin: 1%  0;
     font-size: 23px;
 }
 
 
 
 .carousel-wrapper {
-    
+    display: flex;
+    justify-content: center;
+    width: 100%;
     position: relative;
-    padding: 3% 2% 3% 2%;
 }
 
 
@@ -359,17 +359,11 @@ hr{
     display: flex; 
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
-    width: 98%;
-    padding: 20px 10px;
-    scroll-behavior: smooth;
-    overflow: hidden;
-    position: relative;   
-    border: 1px solid gray; 
-
+    gap: 70px;
+    width: 92%;
+    padding: 20px 20px;
+    overflow: hidden; 
 }
-
-
 
 
 .carousel-card-content{
@@ -383,10 +377,9 @@ hr{
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
-    height: 170px;
-    width: 140px;
+    height: 180px;
+    transition: all 1.7s ease-in-out;
 }
-
 
 
 
@@ -396,10 +389,11 @@ hr{
 }
 
 
+
 .carousel-img-companies{
     width: 115px;
     height: 68x;
-  }
+}
 
   
 .carousel-discount{
@@ -413,7 +407,6 @@ hr{
     padding: 10px;
     margin-bottom: 10px;  
 }
-
 
 
 
@@ -432,16 +425,16 @@ hr{
     background: none;
 }
  
+
 #carousel-arrow-prev {
     left: 0;
     padding-right: 2px;
-
 }
+
 
 #carousel-arrow-next {
     right: 0;
     padding-right: 2px;
-
 }
 
 
@@ -455,10 +448,11 @@ hr{
 
 
 
-@media (max-width: 992px){
+@media (max-width: 480px){
 
-    *{
-        margin: 1%;
+    body{
+        
+        background-color: rgb(230, 226, 226);
     }
 
 
@@ -469,14 +463,88 @@ hr{
 
     .mobile-header{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 100%;    
-        background-color: #fff;
+        background-color: rgb(230, 226, 226);
         padding-bottom: 40px;
         color: #012e4b;
         font-size: 15px;
         font-weight: 500px;
+        box-sizing: border-box;
+        position: fixed;   
+        border-radius: 10px;
+        top: 0;
+        z-index: 1;
+    }
+
+
+
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 100px;
+        background-color: rgb(230, 226, 226);
+    }
+
+
+    .hero-section{
+
+        background-image: none;
+        height: 460px;  
+        align-items: flex-start; 
+    }
+
+
+    .hero-section-compare-insurance-companies-container{
+        margin: 0 3%;
+    }
+
+
+    #hero-section-cta-put-plate-and-compare{
+        flex-wrap: wrap;
+    }
+
+
+    .hero-section-cta-license-plate-input{
+        flex: 2 0 300px;
+    }
+    
+
+    #hero-section-cta-put-plate-and-compare button{
+        flex: 2 0 0;
+    }
+
+
+    .error {      
+        
+        width: 300px;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        margin: -60px auto;   
+    }
+
+
+
+    /*carousel */
+
+    .best-offers-cards-container{
+        margin: 50px 3%;
+    }
+    
+    
+    .best-offers-cards-container h2{
+        margin: 3% 2%;
+        font-size: 19px;
+    }
+    
+    
+    .carousel-container{  
+        gap: 6%;
+        padding: 10% 6%;
     }
     
 

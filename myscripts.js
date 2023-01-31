@@ -88,45 +88,28 @@ form.addEventListener("submit", (event) => {
 
 
 
-
-
-
-
-
-
-
-
-
 //carousel
-const carousel = document.querySelector('.carousel-container');
-const carouselWrapper = document.querySelector('.carousel-wrapper');
+const carouselContainer = document.querySelector('.carousel-container');
 const prev = document.querySelector('#carousel-arrow-prev');
 const next = document.querySelector('#carousel-arrow-next');
-
 
 next.addEventListener('click', function() {
   const carouselCards = document.querySelectorAll('.carousel-card-content');
   const firstCard = carouselCards[0];
 
-  console.log('before:: first:', firstCard, 'first.parent:', firstCard.parentNode);
-  carousel.removeChild(firstCard);
-  console.log('remove:: first:', firstCard, 'first.parent:', firstCard.parentNode);
-  carousel.appendChild(firstCard);
-  console.log('append:: first:', firstCard, 'first.parent:', firstCard.parentNode);
+  carouselContainer .removeChild(firstCard);
+  carouselContainer .appendChild(firstCard);
+
 });
 
 prev.addEventListener('click', function() {
-    const carouselChildren = document.querySelectorAll('.carousel-card-content');
-    const firstElement = carouselChildren[0];
+    const carouselCards = document.querySelectorAll('.carousel-card-content');
+    const lastCard = carouselCards[carouselCards.length - 1];
   
-    console.log('before:: first:', firstElement, 'first.parent:', firstElement.parentNode);
-    carousel.removeChild(firstElement);
-    console.log('remove:: first:', firstElement, 'first.parent:', firstElement.parentNode);
-    carousel.appendChild(firstElement);
-    console.log('append:: first:', firstElement, 'first.parent:', firstElement.parentNode);
+    carouselContainer .removeChild(lastCard);
+    carouselContainer .insertBefore(lastCard, carouselCards[0]);
 
-});   
-
+}); 
 
 
 
