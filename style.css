@@ -358,11 +358,13 @@ hr{
 .carousel-container{
     display: flex; 
     align-items: center;
-    justify-content: space-between;
-    gap: 70px;
-    width: 92%;
-    padding: 20px 20px;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    padding:  40px 20px;
     overflow: hidden; 
+    order: 1px solid gray;
+
 }
 
 
@@ -370,7 +372,7 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     gap: 5px;
     color: #626c71;
     font-size: 12px;  
@@ -378,7 +380,10 @@ hr{
     border-radius: 10px;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
     height: 180px;
+    width: 200px;
     transition: all 1.7s ease-in-out;
+    margin: 0 0px;
+
 }
 
 
@@ -410,32 +415,17 @@ hr{
 
 
 
-.carousel-arrow {
-    position: absolute;
-    display: flex;
-    color: #012e4b; 
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border: none;
-    width: 25px;
-    height: 25px;
-    font-size: 40px;
-    cursor: pointer;
-    background: none;
-}
  
 
-#carousel-arrow-prev {
-    left: 0;
-    padding-right: 2px;
+.carousel-wrapper button{
+   border: none;
+   background-color: #fff;
+   color: #012e4b; 
+   cursor: pointer;
+   font-size: 30px;
 }
 
 
-#carousel-arrow-next {
-    right: 0;
-    padding-right: 2px;
-}
 
 
 /* carousel End */  
@@ -543,10 +533,12 @@ hr{
     
     
     .carousel-container{  
-        gap: 6%;
-        padding: 10% 6%;
+        gap: 4%;
+        padding: 20px 5px;
     }
-    
+    .carousel-card-content{
+        padding: 18px;
+    }
 
 }
 

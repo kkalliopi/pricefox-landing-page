@@ -88,23 +88,53 @@ form.addEventListener("submit", (event) => {
 
 
 
-//carousel
+  //carousel
 const carouselContainer = document.querySelector('.carousel-container');
+const carouselCards = document.querySelectorAll('.carousel-card-content');
 const prev = document.querySelector('#carousel-arrow-prev');
 const next = document.querySelector('#carousel-arrow-next');
+
+
+carouselCards.forEach((card, index) => {
+  if (index < 5) {
+    card.style.display = 'flex';
+  } else {
+    card.style.display = 'none';
+  }
+});
 
 next.addEventListener('click', function() {
   const carouselCards = document.querySelectorAll('.carousel-card-content');
   const firstCard = carouselCards[0];
+ 
+  for (let i = 5; i < carouselCards.length; i++) {
+       
+    carouselCards[i].style.display = 'none';
+  }
+
+  for (let i = 0; i < 5; i++) {
+        
+    carouselCards[i].style.display = 'flex';
+  }
 
   carouselContainer .removeChild(firstCard);
   carouselContainer .appendChild(firstCard);
-
+  
 });
 
 prev.addEventListener('click', function() {
     const carouselCards = document.querySelectorAll('.carousel-card-content');
     const lastCard = carouselCards[carouselCards.length - 1];
+
+    for (let i = 5; i < carouselCards.length; i++) {
+       
+        carouselCards[i].style.display = 'none';
+      }
+      
+      for (let i = 0; i < 5; i++) {
+            
+        carouselCards[i].style.display = 'flex';
+      }
   
     carouselContainer .removeChild(lastCard);
     carouselContainer .insertBefore(lastCard, carouselCards[0]);
@@ -117,10 +147,59 @@ prev.addEventListener('click', function() {
 
 
 
+if (window.matchMedia('(max-width: 480px)').matches) {
+  const carouselContainer = document.querySelector('.carousel-container');
+  const prev = document.querySelector('#carousel-arrow-prev');
+  const next = document.querySelector('#carousel-arrow-next');
+
+  carouselCards.forEach((card, index) => {
+    if (index < 2) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  next.addEventListener('click', function() {
+    const carouselCards = document.querySelectorAll('.carousel-card-content');
+    const firstCard = carouselCards[0];
+
+    for (let i = 0; i < 2; i++) {
+          
+      carouselCards[i].style.display = 'flex';
+    }
+ 
+    for (let i = 2; i < carouselCards.length; i++) {
+         
+      carouselCards[i].style.display = 'none';
+    }
 
 
+    carouselContainer .removeChild(firstCard);
+    carouselContainer .appendChild(firstCard);
 
+  });
 
+  prev.addEventListener('click', function() {
+      const carouselCards = document.querySelectorAll('.carousel-card-content');
+      const lastCard = carouselCards[carouselCards.length - 1];
+      
+                
+      for (let i = 0; i < 2; i++) {
+              
+          carouselCards[i].style.display = 'flex';
+        }
+        
+      for (let i = 2; i < carouselCards.length; i++) {
+         
+          carouselCards[i].style.display = 'none';
+        }
+  
+      carouselContainer .removeChild(lastCard);
+      carouselContainer .insertBefore(lastCard, carouselCards[0]);
+
+  }); 
+}
 
 
 
