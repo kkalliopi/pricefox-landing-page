@@ -130,47 +130,53 @@ form.addEventListener("submit", (event) => {
 
   //carousel
 const carouselContainer = document.querySelector('.carousel-container');
-const carouselCards = document.querySelectorAll('.carousel-card-content');
 const prev = document.querySelector('#carousel-arrow-prev');
 const next = document.querySelector('#carousel-arrow-next');
 
 
 
-
 next.addEventListener('click', function() {
   const carouselCards = document.querySelectorAll('.carousel-card-content');
+  console.log(carouselCards)
   const firstCard = carouselCards[0];
- 
+  console.log(firstCard)
+
   carouselCards.forEach((card, index) => {
-    if (index < 5) {
-      card.classList.toggle('hidden');
-    } else {
-    }
+    const showFlex = index < 5;
+
+    /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
+    and will remove the class if the value is false*/
+    card.classList.toggle('show-flex', showFlex);
+    /*will add the class "hidden" to the card if showFlex is false(index > 5),
+     and will remove the class if showFlex is true*/ 
+    card.classList.toggle('hidden', !showFlex);
+
   });
-
-  carouselContainer .removeChild(firstCard);
-  carouselContainer .appendChild(firstCard,carouselCards[-1]);
-
   
+  carouselContainer.removeChild(firstCard);
+  carouselContainer .appendChild(firstCard);
+
 });
 
 prev.addEventListener('click', function() {
-    const carouselCards = document.querySelectorAll('.carousel-card-content');
-    const lastCard = carouselCards[carouselCards.length - 1];
+  const carouselCards = document.querySelectorAll('.carousel-card-content');
+  const lastCard = carouselCards[carouselCards.length - 1];
 
-    carouselCards.forEach((card, index) => {
-      if (index < 5) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  
-    carouselContainer .removeChild(lastCard);
-    carouselContainer .insertBefore(lastCard, carouselCards[0]);
+  carouselCards.forEach((card, index) => {
+    const showFlex = index < 5;
 
-}); 
+    /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
+    and will remove the class if the value is false*/
+    card.classList.toggle('show-flex', showFlex);
+    /*will add the class "hidden" to the card if showFlex is false(index > 5),
+    and will remove the class if showFlex is true*/
+    card.classList.toggle('hidden', !showFlex);
 
+  });
+
+  carouselContainer .removeChild(lastCard);
+  carouselContainer .insertBefore(lastCard, carouselCards[0]);
+});
 
 
 
@@ -179,57 +185,54 @@ prev.addEventListener('click', function() {
 
 if (window.matchMedia('(max-width: 480px)').matches) {
   console.log('ohai');
-  const carouselContainer = document.querySelector('.carousel-container');
   const prev = document.querySelector('#carousel-arrow-prev');
   const next = document.querySelector('#carousel-arrow-next');
 
-  carouselCards.forEach((card, index) => {
-    if (index < 2) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
-  });
+
+
 
   next.addEventListener('click', function() {
     const carouselCards = document.querySelectorAll('.carousel-card-content');
     const firstCard = carouselCards[0];
-
-    for (let i = 0; i < 2; i++) {
-          
-      carouselCards[i].style.display = 'flex';
-    }
- 
-    for (let i = 2; i < carouselCards.length; i++) {
-         
-      carouselCards[i].style.display = 'none';
-    }
+    
 
 
-    carouselContainer .removeChild(firstCard);
+    carouselCards.forEach((card, index) => {
+      const showFlex = index < 2;
+  
+      /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
+      and will remove the class if the value is false*/
+      card.classList.toggle('show-flex', showFlex);
+      /*will add the class "hidden" to the card if showFlex is false(index > 5),
+       and will remove the class if showFlex is true*/ 
+      card.classList.toggle('hidden', !showFlex);
+  
+    });
+    
+    carouselContainer.removeChild(firstCard);
     carouselContainer .appendChild(firstCard);
-
+  
   });
 
   prev.addEventListener('click', function() {
-      const carouselCards = document.querySelectorAll('.carousel-card-content');
-      const lastCard = carouselCards[carouselCards.length - 1];
-      
-                
-      for (let i = 0; i < 2; i++) {
-              
-          carouselCards[i].style.display = 'flex';
-        }
-        
-      for (let i = 2; i < carouselCards.length; i++) {
-         
-          carouselCards[i].style.display = 'none';
-        }
+    const carouselCards = document.querySelectorAll('.carousel-card-content');
+    const lastCard = carouselCards[carouselCards.length - 1];
   
-      carouselContainer .removeChild(lastCard);
-      carouselContainer .insertBefore(lastCard, carouselCards[0]);
-
-  }); 
+    carouselCards.forEach((card, index) => {
+      const showFlex = index < 2;
+  
+      /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
+      and will remove the class if the value is false*/
+      card.classList.toggle('show-flex', showFlex);
+      /*will add the class "hidden" to the card if showFlex is false(index > 5),
+      and will remove the class if showFlex is true*/
+      card.classList.toggle('hidden', !showFlex);
+  
+    });
+  
+    carouselContainer .removeChild(lastCard);
+    carouselContainer .insertBefore(lastCard, carouselCards[0]);
+  });
 }
 
 
