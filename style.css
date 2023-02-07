@@ -354,22 +354,26 @@ hr{
 }
 
 
-
-.carousel-container{
+.carousel-container {
     display: flex; 
     align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 6%;
     width: 100%;
-    padding:  40px 20px;
-    overflow: hidden; 
-    order: 1px solid gray;
+    padding: 40px 20px;
+
 
 }
 
+.hidden{
+    display: none;
+}
 
-.carousel-card-content{
+.show-flex{
     display: flex;
+}
+
+.carousel-card-content {
     flex-direction: column;
     align-items: center;
     padding: 25px;
@@ -379,10 +383,8 @@ hr{
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    width: 150px;
     height: 180px;
-    width: 200px;
-    transition: all 1.7s ease-in-out;
-    margin: 0 0px;
 
 }
 
@@ -423,6 +425,7 @@ hr{
    color: #012e4b; 
    cursor: pointer;
    font-size: 30px;
+
 }
 
 
@@ -522,7 +525,7 @@ hr{
     /*carousel */
 
     .best-offers-cards-container{
-        margin: 50px 3%;
+        margin: 50px 0%;
     }
     
     
@@ -533,11 +536,12 @@ hr{
     
     
     .carousel-container{  
-        gap: 4%;
-        padding: 20px 5px;
+        gap: 3%;
+        padding: 20px 3px;
+
     }
     .carousel-card-content{
-        padding: 18px;
+        padding: 18px 5px;
     }
 
 }
