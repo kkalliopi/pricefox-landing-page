@@ -1,0 +1,303 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;   
+    font-family: Helvetica,Arial,sans-serif;
+    background-color: rgb(243, 238, 238);
+}
+
+
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #012e4b;
+    width: 100%;
+    height: 70px;
+}
+
+
+.desktop-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 15%;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    color: #012e4b;
+}
+
+
+main h4{
+    margin-left: 15%;
+    font-weight: 300;
+}
+
+
+.vehicle-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    background: #fff;
+    box-shadow: 0 0 29px rgb(0 0 0 / 13%);
+    border-radius: 10px;
+    margin: 0 30% 0 15%;
+    padding: 20px;
+    color: #012e4b ;    
+}
+
+
+.vehicle-details h2{
+    margin: 0;
+    font-weight: 500;
+}
+
+.vehicle-details form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+.container1,
+.container2,
+.container3,
+.container4 {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+
+
+
+
+.license-plate{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+}
+
+.license-plate-input{
+    display: flex;
+    align-items: center;
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+}
+
+.license-plate-input input{
+    border: none;
+    margin-left: 10px;
+    height: 30px;
+}
+
+
+
+
+
+.vehicle-kind{
+    flex: 1 1 50%;
+}
+
+.vehicle-kind select{
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+    padding: 15px;
+    width: 100%;
+}
+
+
+
+.brand{
+    flex: 1 1 50%;
+}
+
+.brand select{
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+    padding: 15px;
+    width: 100%;
+}
+
+
+
+
+.Date-first-release{
+    display: flex;
+    flex-direction: column;  
+    flex: 1 1 50%;
+}
+.Date-first-release input{
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 100%;
+    padding:5px;
+    height: 50px;
+}
+
+
+
+.model{
+    flex: 1 1 50%;
+}
+.model select{
+    display: flex;
+    flex-direction: column;  
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    flex: 1 1 0;
+    padding: 15px;
+}
+
+
+
+.fuel-type{
+    flex: 1 1 50%;
+}
+.fuel-type select{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    flex: 1 1 0;
+    padding: 15px;
+}
+
+
+
+
+.vehicleCc{
+    flex: 1 1 50%;
+}
+.vehicleCc select{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    flex: 1 1 0;
+    padding: 15px;
+}
+
+
+
+
+.model-version{
+    flex: 1 1 50%;
+}
+.model-version select{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    flex: 1 1 0;
+    padding: 2%;
+}
+
+
+
+
+.new-or-used-vehicle{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#used-or-new-buttons{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+.yes-no-button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.used-or-new-buttons .active{ 
+    background-color: #012e4b ;
+    border-radius: 12px;
+    color: white;
+} 
+
+
+.disabled{
+    opacity: .4;
+}
+
+
+
+
+@media (max-width: 480px){
+
+
+
+    .desktop-header{
+        margin: 0 2%;
+    }
+
+
+    main h4{
+        margin: 5% 3%;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    
+    .vehicle-details{
+        padding: 20px 15px;
+        margin: 0 2%;  
+    }
+
+
+    .container1,
+    .container2,
+    .container3,
+    .container4 {
+        flex-wrap: wrap;
+    }
+
+
+}
