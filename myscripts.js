@@ -123,42 +123,44 @@ const next = document.querySelector('#carousel-arrow-next');
 
 
 
+
+// add event click to the next button of carousel
 next.addEventListener('click', function() {
   const carouselCards = document.querySelectorAll('.carousel-card-content');
- 
+  console.log(carouselCards)
   const firstCard = carouselCards[0];
- 
+  
 
   carouselCards.forEach((card, index) => {
-    const showFlex = index < 5;
+    const showCard = index < 5;
 
-    /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
-    and will remove the class if the value is false*/
-    card.classList.toggle('show-flex', showFlex);
-    /*will add the class "hidden" to the card if showFlex is false(index > 5),
-     and will remove the class if showFlex is true*/ 
-    card.classList.toggle('hidden', !showFlex);
+   /*will add the class "hidden" to the card if showCard is false,
+    and will remove the class "hidden" if showCard  is true*/
+    card.classList.toggle('hidden', !showCard);
+
 
   });
-  
+ 
   carouselContainer.removeChild(firstCard);
   carouselContainer .appendChild(firstCard);
 
+  //const lastChild = carouselCards[carouselCards.length - 1];
+  //carouselContainer.insertBefore(firstCard, lastChild ? lastChild.nextSibling : null);
+  
+
 });
 
+// add event click to the prev button of carousel
 prev.addEventListener('click', function() {
   const carouselCards = document.querySelectorAll('.carousel-card-content');
   const lastCard = carouselCards[carouselCards.length - 1];
 
   carouselCards.forEach((card, index) => {
-    const showFlex = index < 5;
+    const showCard = index < 5;
 
-    /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
-    and will remove the class if the value is false*/
-    card.classList.toggle('show-flex', showFlex);
-    /*will add the class "hidden" to the card if showFlex is false(index > 5),
-    and will remove the class if showFlex is true*/
-    card.classList.toggle('hidden', !showFlex);
+    /*will add the class "hidden" to the card if showCard is false,
+    and will remove the class "hidden" if showCard  is true*/
+    card.classList.toggle('hidden', !showCard);
 
   });
 
