@@ -138,7 +138,6 @@ next.addEventListener('click', function() {
     and will remove the class "hidden" if showCard  is true*/
     card.classList.toggle('hidden', !showCard);
 
-
   });
  
   carouselContainer.removeChild(firstCard);
