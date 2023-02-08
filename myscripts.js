@@ -179,12 +179,9 @@ function init(){
  
    carouselCards.forEach((card, index) => {
    const showFlex = index < 2;
- 
-   /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
-   and will remove the class if the value is false*/
-   card.classList.toggle('show-flex', showFlex);
-   /*will add the class "hidden" to the card if showFlex is false(index > 5),
-   and will remove the class if showFlex is true*/
+
+    /*will add the class "hidden" to the card if showCard is false,
+   and will remove the class "hidden" if showCard  is true*/
    card.classList.toggle('hidden', !showFlex);
  
    });
@@ -196,12 +193,9 @@ function init(){
  
      carouselCards.forEach((card, index) => {
        const showFlex = index < 2;
-   
-       /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
-       and will remove the class if the value is false*/
-       card.classList.toggle('show-flex', showFlex);
-       /*will add the class "hidden" to the card if showFlex is false(index > 5),
-        and will remove the class if showFlex is true*/ 
+    
+        /*will add the class "hidden" to the card if showCard is false,
+       and will remove the class "hidden" if showCard  is true*/
        card.classList.toggle('hidden', !showFlex);
    
      });
@@ -218,11 +212,8 @@ function init(){
      carouselCards.forEach((card, index) => {
        const showFlex = index < 2;
    
-       /*will add the class "show-flex" to the card if the showFlex value is true(index < 5),
-       and will remove the class if the value is false*/
-       card.classList.toggle('show-flex', showFlex);
-       /*will add the class "hidden" to the card if showFlex is false(index > 5),
-       and will remove the class if showFlex is true*/
+        /*will add the class "hidden" to the card if showCard is false,
+        and will remove the class "hidden" if showCard  is true*/
        card.classList.toggle('hidden', !showFlex);
    
      });

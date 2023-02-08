@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="el-GR">
+    <head>
+        <title>Λεπτομέρειες οχήματος & οδηγού │ Pricefox</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style2.css">        
+    </head>
+    <body>
+        <header>
+            <div class="desktop-header">
+                <a class="desktop-header-img-logo"  href="www.pricefox.gr"><img src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/general/el-top-left-logo.svg" title="pricefox logo" alt="Pricefox" width="186" height="55"></a>
+                <img class="img-phone" src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-phone.webp"  title="pricefox phone" alt="Pricefox phone" width="27" height="27"/>
+            </div>
+        </header>
+        <main>
+            <h4>Χρειαζόμαστε κάποιες πληροφορίες για τον οδηγό και το όχημα και θα βρούμε για σένα τις καλύτερες προσφορές</h4>
+            <div class="vehicle-details">
+                <h2>Στοιχεία οχήματος</h2>
+                <form action="/foo" method="POST">
+                    <div class="container1">
+                        <div class="license-plate">
+                            <label for="licensePlate">Πινακίδα</label>
+                            <div class="license-plate-input">
+                                <img src="https://s3.eu-central-1.amazonaws.com/assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/license-plate-gr.png" alt="gr plate">
+                                <input  id='licensePlate'  type="text" name="licensePlate"  value="IPO3423"/>
+                            </div>                            
+                        </div>
+                        <div class="vehicle-kind">
+                            <label for="vehicleKind">Κατηγορία Οχήματος</label>
+                            <select  id='vehicleKind' name="vehicleKind">
+                                <option value="passenger-vehicle">Επιβατικό Ι.Χ.</option>
+                                <option value="moto">Μηχανή</option>
+                                <option value="truck">Φορτηγό Ι.Χ.</option>
+                                <option value="farm-truck">Φορτηγό Ι.Χ. Αγροτικό</option>
+                            </select>  
+                        </div>
+                    </div> 
+                    <div class="container2">  
+                        <div class="brand">
+                            <label for="brandOption">Μάρκα</label>
+                            <select  id='brandOption' name="brandOption">
+                                <option value="">Παρακαλώ διαλέξτε</option>
+                                <option value="">AUDI</option>
+                                <option value="">BMW</option>
+                                <option value="">CITROEN</option>
+                                <option value="">FIAT</option>
+                                <option value="">FORD</option>
+                                <option value="">HYUNDAI</option>
+                                <option value="">MERCEDES-BENZ</option>
+                                <option value="">NISSAN</option>
+                                <option value="">OPEL</option>
+                                <option value="">PEUGEOT</option>
+                                <option value="">SEAT</option>
+                                <option value="">SMART</option>
+                            </select>  
+                        </div>
+                        <div class="Date-first-release">
+                            <label for="DateFirstRelease">Ημ. πρώτης κυκλοφορίας</label>
+                            <input type="date" id="DateFirstRelease" name="DateFirstRelease">
+                        </div>
+                    </div> 
+                    <div class="container3">
+                        <div class="model disabled">
+                            <label for="modelOption">Μοντέλο</label>
+                            <select  id='modelOption' name="modelOption">
+                                <option value="">Παρακαλώ διαλέξτε</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                            </select> 
+                        </div>
+                        <div class="fuel-type disabled">
+                            <label for="fuelType">Είδος καυσίμου</label>
+                            <select  id='fuelType' name="fuelType">
+                                <option value="">Παρακαλώ διαλέξτε</option>
+                                <option value="">Βενζίνη</option>
+                            </select>
+                        </div>
+                    </div>  
+                    <div class="container4">
+                        <div class="vehicleCc disabled">
+                            <label for="vehicleCc">Κυβικά</label>
+                            <select  id='vehicleCc' name="vehicleCc">
+                                <option value="">Παρακαλώ διαλέξτε</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                            </select>
+                        </div>
+                        <div class="model-version disabled">
+                            <label for="modelVersion">Έκδοση μοντέλου</label>
+                            <select  id='modelVersion' name="modelVersion">
+                                <option value="">Παρακαλώ διαλέξτε</option>
+                                <option value="">1</option>
+                            </select>
+                        </div>
+                    </div>                    
+                        <div class="new-or-used-vehicle">
+                            <label for="used-or-new-buttons">Αγόρασα το όχημα μεταχειρισμένο</label>
+                               <div class="used-or-new-buttons" id="used-or-new-buttons">
+                                    <button type="button" class="yes-no-button" id='yes-button' name="usedVehicle">ΝΑΙ </button>
+                                    <button type="button" class="yes-no-button" id='no-button' name="newVehicle">OXI</button>
+                               </div>
+
+                        </div>
+                </form>
+
+            </div>
+        </main>
+        <script src="scripts2.js"></script>
+    </body>
+</html>    
