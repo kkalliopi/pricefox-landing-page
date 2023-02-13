@@ -51,7 +51,8 @@ main h4{
     border-radius: 10px;
     margin: 0 30% 0 15%;
     padding: 20px;
-    color: #012e4b ;    
+    color: #012e4b ;   
+    font-size: 15px; 
 }
 
 
@@ -64,29 +65,35 @@ main h4{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    color: #737373
 }
 
 
 
-.container1,
-.container2,
-.container3,
-.container4 {
+.vehicle-details-container1,
+.vehicle-details-container2,
+.vehicle-details-container3,
+.vehicle-details-container4{
   display: flex;
   width: 100%;
-  gap: 50px;
+  gap: 2%;
+  align-items: center;
+}
+
+
+.hidden{
+    display: none !important;
 }
 
 
 
-
-.license-plate{
+.vehicle-details-license-plate{
     display: flex;
     flex-direction: column;
-    flex: 1 1 50%;
+    flex: 1 1 25%;
 }
 
-.license-plate-input{
+.vehicle-details-license-plate-input{
     display: flex;
     align-items: center;
     border: 1px solid #bcc0d1;
@@ -96,7 +103,7 @@ main h4{
     height: 50px;
 }
 
-.license-plate-input input{
+.vehicle-details-license-plate-input input{
     border: none;
     margin-left: 10px;
     height: 30px;
@@ -106,11 +113,11 @@ main h4{
 
 
 
-.vehicle-kind{
-    flex: 1 1 50%;
+.vehicle-details-vehicle-kind{
+    flex: 1 1 25%;
 }
 
-.vehicle-kind select{
+.vehicle-details-vehicle-kind select{
     display: flex;
     flex-direction: column; 
     border: 1px solid #bcc0d1;
@@ -124,11 +131,11 @@ main h4{
 
 
 
-.brand{
-    flex: 1 1 50%;
+.vehicle-details-brand{
+    flex: 1 1 25%;
 }
 
-.brand select{
+.vehicle-details-brand select{
     display: flex;
     flex-direction: column; 
     border: 1px solid #bcc0d1;
@@ -143,12 +150,12 @@ main h4{
 
 
 
-.Date-first-release{
+.vehicle-details-date-first-release{
     display: flex;
     flex-direction: column;  
-    flex: 1 1 50%;
+    flex: 1 1 25%;
 }
-.Date-first-release input{
+.vehicle-details-date-first-release input{
     border: 1px solid #bcc0d1;
     box-sizing: border-box;
     border-radius: 12px;
@@ -159,10 +166,10 @@ main h4{
 
 
 
-.model{
+.vehicle-details-model{
     flex: 1 1 50%;
 }
-.model select{
+.vehicle-details-model select{
     display: flex;
     flex-direction: column;  
     border: 1px solid #bcc0d1;
@@ -177,10 +184,10 @@ main h4{
 
 
 
-.fuel-type{
+.vehicle-details-fuel-type{
     flex: 1 1 50%;
 }
-.fuel-type select{
+.vehicle-details-fuel-type select{
     display: flex;
     flex-direction: column;
     border: 1px solid #bcc0d1;
@@ -196,10 +203,10 @@ main h4{
 
 
 
-.vehicleCc{
+.vehicle-details-vehicleCc{
     flex: 1 1 50%;
 }
-.vehicleCc select{
+.vehicle-details-vehicleCc select{
     display: flex;
     flex-direction: column;
     border: 1px solid #bcc0d1;
@@ -215,10 +222,10 @@ main h4{
 
 
 
-.model-version{
+.vehicle-details-model-version{
     flex: 1 1 50%;
 }
-.model-version select{
+.vehicle-details-model-version select{
     display: flex;
     flex-direction: column;
     border: 1px solid #bcc0d1;
@@ -234,13 +241,12 @@ main h4{
 
 
 
-.new-or-used-vehicle{
+.vehicle-details-new-or-used-vehicle{
     display: flex;
     flex-direction: column;
 }
 
-
-#used-or-new-buttons{
+#new-or-used-buttons{
     display: flex;
     justify-content: space-around;
     border: 1px solid #bcc0d1;
@@ -257,11 +263,29 @@ main h4{
     padding: 10px;
 }
 
-.used-or-new-buttons .active{ 
+.new-or-used-buttons .active{ 
     background-color: #012e4b ;
     border-radius: 12px;
     color: white;
 } 
+
+
+
+
+
+.vehicle-details-transfer-date{
+    display: flex;
+    flex-direction: column;  
+}
+.vehicle-details-transfer-date input{
+    border: 1px solid #bcc0d1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 100px;
+    padding:5px;
+    height: 50px;
+}
+
 
 
 .disabled{
