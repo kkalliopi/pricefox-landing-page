@@ -52,7 +52,7 @@ main h4{
     margin: 0 30% 0 15%;
     padding: 20px;
     color: #012e4b ;   
-    font-size: 15px; 
+    font-size: 11px; 
 }
 
 
@@ -69,15 +69,24 @@ main h4{
 }
 
 
-
-.vehicle-details-container1,
-.vehicle-details-container2,
+.vehicle-details-container0,
 .vehicle-details-container3,
-.vehicle-details-container4{
+.vehicle-details-container4,
+.vehicle-details-container5{
   display: flex;
   width: 100%;
   gap: 2%;
   align-items: center;
+}
+
+
+.vehicle-details-container1,
+.vehicle-details-container2{
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+    
 }
 
 
@@ -90,7 +99,7 @@ main h4{
 .vehicle-details-license-plate{
     display: flex;
     flex-direction: column;
-    flex: 1 1 25%;
+    flex: 1 1 50%;
 }
 
 .vehicle-details-license-plate-input{
@@ -101,6 +110,7 @@ main h4{
     border-radius: 12px;
     padding: 5px;
     height: 50px;
+
 }
 
 .vehicle-details-license-plate-input input{
@@ -114,7 +124,7 @@ main h4{
 
 
 .vehicle-details-vehicle-kind{
-    flex: 1 1 25%;
+    flex: 1 1 50%;
 }
 
 .vehicle-details-vehicle-kind select{
@@ -127,12 +137,13 @@ main h4{
     height: 50px;
     padding: 15px;
     width: 100%;
+ 
 }
 
 
 
 .vehicle-details-brand{
-    flex: 1 1 25%;
+    flex: 1 1 50%;
 }
 
 .vehicle-details-brand select{
@@ -153,16 +164,17 @@ main h4{
 .vehicle-details-date-first-release{
     display: flex;
     flex-direction: column;  
-    flex: 1 1 25%;
+    flex: 1 1 50%;
+ 
 }
 .vehicle-details-date-first-release input{
     border: 1px solid #bcc0d1;
     box-sizing: border-box;
     border-radius: 12px;
-    width: 100%;
     padding:5px;
     height: 50px;
 }
+
 
 
 
@@ -288,8 +300,8 @@ main h4{
 
 
 
-.disabled{
-    opacity: .4;
+.opacity{
+    opacity: .3;
 }
 
 
@@ -316,10 +328,12 @@ main h4{
     }
 
 
-    .container1,
-    .container2,
-    .container3,
-    .container4 {
+    .vehicle-details-container0,
+    .vehicle-details-container1,
+    .vehicle-details-container2,
+    .vehicle-details-container3,
+    .vehicle-details-container4,
+    .vehicle-details-container5 {
         flex-wrap: wrap;
     }
 

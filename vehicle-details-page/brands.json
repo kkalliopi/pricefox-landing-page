@@ -1,0 +1,7 @@
+[
+    { "id":"AUDI", "value": "AUDI" },
+    { "id": "BMW", "value":"BMW"},
+    { "id": "CITROEN", "value":"CITROEN" },
+    { "id" : "FIAT", "value":"FIAT"},
+    { "id": "FORD", "value":"FORD" }
+]

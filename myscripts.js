@@ -52,42 +52,38 @@ function init(){
  
  const validGreekPlate = /^[α-ωΑ-Ω]{3}\d{4}$/;
  
- function mustMatchGreekPlates(s) {
+ plate.addEventListener("input", (e) => { 
    if (document.querySelector('input[value="car"]:checked, input[value="farm-truck"]:checked, input[value="truck"]:checked')){  
      if (validGreekPlate.test(e.target.value)) {
        resetError(plateError);
-       e.target.value = e.target.value.toUpperCase();
        return;
-     }
-     if (!greekAlphabet.test(e.target.value.slice(0, 3))) {
-         setError("Επιτρέπονται μόνο 3 ελληνικοί χαρακτήρες και 4 αριθμοί πχ.ΙΡΟ3245");
+     }else if (!greekAlphabet.test(e.target.value.slice(0, 3))) {
+         setError(plateError, "Επιτρέπονται μόνο 3 ελληνικοί χαρακτήρες και 4 αριθμοί πχ.ΙΡΟ3245");
          e.target.value = e.target.value.slice(0, -1);
      }else if (invalidGreekCharacters.test(e.target.value.slice(0, 3))) {
-         setError("Οι ελληνικοί χαρακτήρες Γ, Δ, Θ, Λ, Ξ, Π, Σ, Φ, Ψ, Ω δεν επιτρέπονται σε συμβατικές πινακίδες.");
+         setError(plateError, "Οι ελληνικοί χαρακτήρες Γ, Δ, Θ, Λ, Ξ, Π, Σ, Φ, Ψ, Ω δεν επιτρέπονται σε συμβατικές πινακίδες.");
          e.target.value = e.target.value.slice(0, -1);
      }
    
  }else if (document.querySelector('input[value="moto"]:checked')){
-     if (plate.validity.valid) {
-       plateError.textContent = ""; 
-       plateError.className = "error";
+  if (validGreekPlate.test(e.target.value)) {
+      resetError(plateError);
+      return;
    }else if (!greekAlphabet.test(e.target.value.slice(0, 3))) {
-       plateError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 ελληνικά γράμματα ακολουθούμενα από 1 έως 3 αριθμούς.,π.χ. ΧΖΝ61";
-       plateError.className = "error active";
+       setError(plateError, "Η πινακίδα θα πρέπει να περιέχει τουλάχιστον 2 ελληνικά γράμματα ακολουθούμενα από τουλάχιστον 2 αριθμούς.,π.χ. ΧΖΝ614");
        e.target.value = e.target.value.slice(0, -1);
    }else if (invalidGreekCharacters.test(e.target.value.slice(0, 3))) {
-       plateError.textContent = "Οι ελληνικοί χαρακτήρες Γ, Δ, Θ, Λ, Ξ, Π, Σ, Φ, Ψ, Ω δεν επιτρέπονται σε συμβατικές πινακίδες.";
-       plateError.className = "error active";
+       setError(plateError, "Οι ελληνικοί χαρακτήρες Γ, Δ, Θ, Λ, Ξ, Π, Σ, Φ, Ψ, Ω δεν επιτρέπονται σε συμβατικές πινακίδες.");
        e.target.value = e.target.value.slice(0, -1);
    }
  }
  e.target.value = e.target.value.toUpperCase();
- }
- 
- plate.addEventListener("input", (e) => {   
-   mustMatchGreekPlates(e.target.value);
  });
  
+
+
+ 
+
  //check if the value is invalid to submit.If it is show the error message and prevent it from submit by canceling the event.          
  form.addEventListener("submit", (event) => {  
      
@@ -100,7 +96,7 @@ function init(){
      }  
      else if (document.querySelector('input[value="moto"]:checked')){
        if (!plate.validity.valid) {
-         plateError.textContent = "Η πινακίδα θα πρέπει να περιέχει 3 ελληνικά γράμματα ακολουθούμενα από 1 έως 3 αριθμούς.,π.χ. ΧΖΝ61";
+         plateError.textContent = "Η πινακίδα δε θα πρέπει να περιέχει πάνω από 3 ελληνικά γράμματα";
          plateError.className = "error active";
          event.preventDefault();
        }
@@ -125,27 +121,21 @@ function init(){
  
  // add event click to the next button of carousel
  next.addEventListener('click', function() {
-   const carouselCards = document.querySelectorAll('.carousel-card-content');
-   console.log(carouselCards)
+   let carouselCards = document.querySelectorAll('.carousel-card-content');
    const firstCard = carouselCards[0];
-   
  
+   carouselContainer.removeChild(firstCard);
+   carouselContainer.appendChild(firstCard);
+ 
+   carouselCards = document.querySelectorAll('.carousel-card-content');
+
    carouselCards.forEach((card, index) => {
      const showCard = index < 5;
  
-    /*will add the class "hidden" to the card if showCard is false,
-     and will remove the class "hidden" if showCard  is true*/
+    /* toggle will add the class "hidden" to the card if condition !showCard is true(i.e index > 5),
+     and will remove the class "hidden" if condition !showCard  is false. */
      card.classList.toggle('hidden', !showCard);
- 
    });
-  
-   carouselContainer.removeChild(firstCard);
-   carouselContainer .appendChild(firstCard);
- 
-   //const lastChild = carouselCards[carouselCards.length - 1];
-   //carouselContainer.insertBefore(firstCard, lastChild ? lastChild.nextSibling : null);
-   
- 
  });
  
  // add event click to the prev button of carousel
@@ -156,8 +146,8 @@ function init(){
    carouselCards.forEach((card, index) => {
      const showCard = index < 5;
  
-     /*will add the class "hidden" to the card if showCard is false,
-     and will remove the class "hidden" if showCard  is true*/
+     /* toggle will add the class "hidden" to the card if condition !showCard is true(i.e index > 5),
+     and will remove the class "hidden" if condition !showCard  is false. */
      card.classList.toggle('hidden', !showCard);
  
    });
@@ -180,28 +170,32 @@ function init(){
    carouselCards.forEach((card, index) => {
    const showFlex = index < 2;
 
-    /*will add the class "hidden" to the card if showCard is false,
-   and will remove the class "hidden" if showCard  is true*/
+   /* toggle will add the class "hidden" to the card if condition !showCard is true(i.e index > 5),
+     and will remove the class "hidden" if condition !showCard  is false. */
    card.classList.toggle('hidden', !showFlex);
  
    });
  
    next.addEventListener('click', function() {
-     const carouselCards = document.querySelectorAll('.carousel-card-content');
+     let carouselCards = document.querySelectorAll('.carousel-card-content');
      const firstCard = carouselCards[0];
- 
+
+
+     carouselContainer.removeChild(firstCard);
+     carouselContainer .appendChild(firstCard);
+
+     carouselCards = document.querySelectorAll('.carousel-card-content');
  
      carouselCards.forEach((card, index) => {
        const showFlex = index < 2;
     
-        /*will add the class "hidden" to the card if showCard is false,
-       and will remove the class "hidden" if showCard  is true*/
+       /* toggle will add the class "hidden" to the card if condition !showCard is true(i.e index > 5),
+        and will remove the class "hidden" if condition !showCard  is false. */
        card.classList.toggle('hidden', !showFlex);
    
      });
      
-     carouselContainer.removeChild(firstCard);
-     carouselContainer .appendChild(firstCard);
+
    
    });
  
@@ -212,8 +206,8 @@ function init(){
      carouselCards.forEach((card, index) => {
        const showFlex = index < 2;
    
-        /*will add the class "hidden" to the card if showCard is false,
-        and will remove the class "hidden" if showCard  is true*/
+      /* toggle will add the class "hidden" to the card if condition !showCard is true(i.e index > 5),
+      and will remove the class "hidden" if condition !showCard  is false. */
        card.classList.toggle('hidden', !showFlex);
    
      });
