@@ -38,8 +38,31 @@ addEventListener('load', e => {
 });
 
 
-
 const model = document.querySelector('#modelOption');
+
+
+async function fetchAndRenderModelList() {
+
+  const response = await fetch('/audiModels.json');
+  const modelList = await response.json();
+
+  for (mode of modelList) {
+    const opt1 = document.createElement('option');
+
+    opt1.id = mode.id;
+    opt1.textContent = mode.value;
+
+    model.appendChild(opt1);
+  }
+}
+
+
+addEventListener('load', e => {
+  fetchAndRenderModelList();
+});
+
+
+
 const fuel = document.querySelector('#fuelOption');
 const cubic = document.querySelector('#vehicleCcOption');
 const modelVersion = document.querySelector('#modelVersionOption');
